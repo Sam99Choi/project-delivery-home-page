@@ -57,7 +57,7 @@ export default function ModalRestaurante({ isOpen, setOpen, currentDish, current
                 </div>
                 <div className="flex justify-center items-center w-full px-10 my-3">
                   <p className="flex justify-start items-center w-full h-auto text-cinza-h2 text-xs font-medium">
-                    <span>{currentDish.price}</span>
+                    <span>{currentDish.price} </span> 
                   </p>
                 </div>
               </div>

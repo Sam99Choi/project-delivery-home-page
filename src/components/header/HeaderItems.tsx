@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 import Link from "next/link";
 import Avatar from "./Header-icons/Avatar";
 import Search from "./Header-icons/Search";
