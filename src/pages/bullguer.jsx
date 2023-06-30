@@ -10,70 +10,70 @@ import { useState } from "react";
 export const getServerSideProps = async () => {
   const pratos = [
     {
-      key: 1,
+      id: 1,
       title: "Bullguer",
       content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price:"35.90",
       imageURL:"/images-restaurant/bullguer/bullguer.png",
     },
     {
-      key: 2,
+      id: 2,
       title:"Lumberjack",
       content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price:"26.90",
       imageURL:"/images-restaurant/bullguer/Lumberjack.png"
     }, 
     {
-      key: 3,
+      id: 3,
       title:"Stencil",
       content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odiolabore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price:"49.99",
       imageURL:"/images-restaurant/bullguer/Stencil.png",
     },
     {
-      key: 4,
+      id: 4,
       title:"Chicken Hot Honey",
       content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price:"49.99",
       imageURL:"/images-restaurant/bullguer/ChickenHotHoney.png",
     },
     {
-      key: 5,
+      id: 5,
       title:"Standard",
       content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odiolabore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price:"49.99",
       imageURL:"/images-restaurant/bullguer/Standard.png",
     },
     {
-      key: 6,
+      id: 6,
       title:"Bulldog",
       content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price:"49.99",
       imageURL:"/images-restaurant/bullguer/Bulldog.png",
     },
     {
-      key: 7,
+      id: 7,
       title:"Crickles",
       content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price:"49.99",
       imageURL:"/images-restaurant/bullguer/Crinckles.png" ,
     },
     {
-      key: 8,
+      id: 8,
       title:"Cheese Fries",
       content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price:"49.99",
       imageURL:"/images-restaurant/bullguer/CheeseFries.png",
     },
     {
-      key: 9,
+      id: 9,
       title:"Maionese Bullguer",
       content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price:"49.99",
       imageURL:"/images-restaurant/bullguer/Maionese.png",   
     },
     {
-      key: 10,
+      id: 10,
       title:"Molho de Queijo",
       content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price:"49.99",
@@ -126,7 +126,7 @@ export default function Bullguer(props) {
           props.pratos.length > 0 
           ? props.pratos.map((prato) => (
             <Pratos
-              key={prato.key}
+              key={prato.id}
               prato={prato}
               title={prato.title}
               content={prato.content}

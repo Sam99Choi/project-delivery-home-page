@@ -27,6 +27,10 @@ export default function ModalRestaurante({ isOpen, setOpen, currentDish, current
    [isOpen]
   );
 
+  const handleAddToCart = (currentDish) => {
+    addProduct(currentDish);
+    setOpen(!isOpen)
+  }
  
   const handleChangePrice = () => {
     setModalPrice((currentDish.price * quantity).toFixed(2));
@@ -86,7 +90,7 @@ export default function ModalRestaurante({ isOpen, setOpen, currentDish, current
                     addCount = {() => setQuantity(quantity + 1)}
                     decCount = {() => setQuantity(quantity - 1)}
                   />
-                  <button onClick={addProduct}>
+                  <button onClick={() => handleAddToCart(currentDish)}>
                     <Botao label='Adicionar' currency="R$ " priceModal={modalPrice} />
                   </button>
                   

@@ -8,7 +8,7 @@ export default function Item(title, price) {
     
     return (
         <div>
-            <div className="flex-cow w-100% h-100  py-4 space-y-3 border-t border-cinza z-40">
+            <div className="flex-cow w-100% h-100  py-4 space-y-3 bg-branco border-t border-cinza z-50">
                   <div className="flex justify-between text-base font-semibold text-cinza-h2 mb-6">
                     <h2>Nome do Prato</h2>
                     <span>R$ 35.00</span>
