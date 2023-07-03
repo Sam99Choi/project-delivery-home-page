@@ -27,11 +27,16 @@ export default function Bag({ bagOpen, setBagOpen }) {
             {product && (
               <>
                <Local local="Nome do restaurante" />
-                
-                
-
+               
                 {products.map((product, index) => {
-                  return <Item key={index} products={product} />;
+                  return (
+                    <>
+                      <h2>
+                        <span>quantity</span>: {product.quantity}
+                      </h2>
+                      <Item key={index} products={product} />
+                    </>
+                  );
                 })}
 
                 <div className="flex-col py-3 text-cinza-200 border-t border-cinza ">
