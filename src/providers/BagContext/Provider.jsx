@@ -11,21 +11,18 @@ export const BagContext = createContext({});
         if (!!dish) {
             const newProducts = products.map((product) => {
                 if (product.id === currentDish.id) {
-                    return { ...product, quantity: product.quantity += 1 };
+                    return { 
+                        ...product, 
+                        quantity: product.quantity += 1 
+                    };
                 } else {
                     return product;
                 }
             });
-
-            console.log(newProducts);
-            
-            setProducts([
-                ...products, 
-                ...newProducts
-            ]);
+            setProducts(newProducts);
         } else {
             const newDish = { ...currentDish };
-            newDish.quantity = 0; 
+            newDish.quantity = 1; 
             setProducts([...products, newDish]);
         }
     };
