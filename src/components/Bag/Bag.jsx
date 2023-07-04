@@ -67,6 +67,6 @@ export default function Bag({ bagOpen, setBagOpen }) {
       </div>
     );
   } else {
-    return <> </>;
+    return <></>;
   }
 }
