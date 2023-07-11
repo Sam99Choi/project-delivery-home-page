@@ -7,7 +7,7 @@ export default function McDonalds() {
       <div className="hover:-translate-y-0.5 transition flex items-center">
         <div>
         <Card 
-            titleLocal={"McDonalds's  • Av. Paulista"}
+            titleLocal={"McDonald's  • Av. Paulista"}
             typeDistance={"Lanche • 3.5km"}
             minFreight={"30 - 40 min • R$10,99"}
             imageURL={"/../public/images/mc.png"}

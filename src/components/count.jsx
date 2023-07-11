@@ -1,15 +1,13 @@
 import { BagProvider, useBagProvider } from '@/providers/BagContext/Provider';
-import { useContext } from 'react';
-import { useState } from 'react';
 
 
-//addCount, decCount, quantity,  //{quantity}
-export default function Contador({small, disabled}) {
-  const { increment, decrement, quantity } = useBagProvider()
+export default function Count({small}) {
 
-  return (
-    <div className={`flex justify-center items-center ${small ? 'h-10' : 'h-12' } ${small ? 'w-18' : 'w-28' } ${small ? 'p-2' : 'p-0'} gap-2 border-solid border-2 border-gray rounded-md`}>
-      <button className={`${quantity < 2 ? 'cursor-not-allowed' : 'cursor-pointer'}`} disabled={quantity < 2} onClick={decrement} >
+    const { increment, decrement, quantidade } = useBagProvider()
+    
+    return (
+        <div className={`flex justify-center items-center ${small ? 'h-10' : 'h-12' } ${small ? 'w-18' : 'w-28' } ${small ? 'p-2' : 'p-0'} gap-2 border-solid border-2 border-gray rounded-md`}>
+      <button disabled={quantidade < 2} onClick={decrement}>
         <svg
           className="my-1"
           xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +20,7 @@ export default function Contador({small, disabled}) {
         </svg>
       </button>
       <div className="flex justify-center items-center w-9 h-8 font-medium">
-        {quantity}
+        {quantidade}
       </div>
       <button onClick={increment}>
         <svg
@@ -37,5 +35,5 @@ export default function Contador({small, disabled}) {
         </svg>
       </button>
     </div>
-  );
+    )
 }

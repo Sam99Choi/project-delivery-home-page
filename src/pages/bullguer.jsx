@@ -5,6 +5,7 @@ import Cardapio from "@/components/Restaurante/Cardapio";
 import InfoHeader from "@/components/Restaurante/InfoHeader";
 import ModalRestaurante from "@/components/Restaurante/ModalRestaurante";
 import Pratos, { IPratos } from "@/components/Restaurante/Pratos";
+import { useBagProvider } from "@/providers/BagContext/Provider";
 import { useState } from "react";
 
 export const getServerSideProps = async () => {
@@ -97,7 +98,8 @@ export const getServerSideProps = async () => {
 
 export default function Bullguer(props) {
   const [open, setOpen] = useState(false);
-  const [currentDish, setCurrentDish] = useState({});
+  //const [currentDish, setCurrentDish] = useState({});
+  const {currentDish, setCurrentDish} = useBagProvider()
 
   return (
     <div className="">

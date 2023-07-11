@@ -4,7 +4,20 @@ export const BagContext = createContext({});
 
  export const BagProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
+    const [currentDish, setCurrentDish] = useState({})
+    const [modalPrice, setModalPrice] = useState(currentDish.price);
+    const [quantity, setQuantity] = useState(1) 
+    const [finalPrice, setFinalPrice] = useState()
 
+    const increment = () => {
+        setQuantity(quantity + 1)
+    }
+
+    const decrement = () => {
+        setQuantity(quantity - 1)
+    }
+
+///*
     const addProduct = (currentDish) => {
         const dish = products.filter((item) => item.id === currentDish.id)[0];
         
@@ -26,15 +39,16 @@ export const BagContext = createContext({});
             setProducts([...products, newDish]);
         }
     };
+  
 
-    const removeProduct = (products) => {
-        
-    };
+    const removeProduct = (currentDish) => { 
+        setProducts(products.filter(item => item.id !== currentDish.id))
+    }       
 
     return (
-        <BagContext.Provider value={{products, addProduct, removeProduct}}>
+        <BagContext.Provider value={{products, addProduct, removeProduct, increment, decrement, quantity, setQuantity, modalPrice, setModalPrice, currentDish, setCurrentDish}}>
             {children}
-        </BagContext.Provider>
+        </BagContext.Provider> 
     );
 }
 
