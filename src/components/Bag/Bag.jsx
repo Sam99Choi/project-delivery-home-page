@@ -4,15 +4,18 @@ import X from "../Restaurante/X";
 import Item from "./Item";
 import Local from "./Local";
 import Botao from "../Restaurante/Botao";
-import { BagContext, useBagProvider } from "@/providers/BagContext/Provider";
+import { useBagProvider } from "@/providers/BagContext/Provider";
 import SubPrice from "./SubPrice";
 
 export default function Bag({ bagOpen, setBagOpen }) {
-  const { products } = useContext(BagContext);
-  const { addProduct, quantity, setQuantity, currentDish, modalPrice } =
-    useBagProvider();
-
-  //const [product, setProduct] = useState(false);
+  const {
+    products,
+    addProduct,
+    quantity,
+    setQuantity,
+    currentDish,
+    modalPrice,
+  } = useBagProvider();
 
   if (bagOpen) {
     return (
@@ -24,20 +27,20 @@ export default function Bag({ bagOpen, setBagOpen }) {
                 {`Sua sacola está vazia :'(`}
               </p>
             )}
-            
+
             <Local local="Nome do Restaurante" />
-            
+
             {products.map((product, index) => {
               return (
-                <div key={index}>            
-                 {/* <h2>
+                <div key={index}>
+                  {/* <h2>
                     <span>quantity</span>: {product.quantity}
                   </h2> */}
                   <Item product={product} />
                 </div>
               );
             })}
-            
+
             <SubPrice />
 
             <div className="fixed bottom-0 flex-col w-[400px] h-[100px] bg-branco space-y-3 z-10 text-cinza-h2">

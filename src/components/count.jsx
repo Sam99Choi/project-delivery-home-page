@@ -1,12 +1,16 @@
-import { BagProvider, useBagProvider } from '@/providers/BagContext/Provider';
+import { useBagProvider } from "@/providers/BagContext/Provider";
 
+export default function Count({ small }) {
+  const { increment, decrement, quantidade } = useBagProvider();
 
-export default function Count({small}) {
-
-    const { increment, decrement, quantidade } = useBagProvider()
-    
-    return (
-        <div className={`flex justify-center items-center ${small ? 'h-10' : 'h-12' } ${small ? 'w-18' : 'w-28' } ${small ? 'p-2' : 'p-0'} gap-2 border-solid border-2 border-gray rounded-md`}>
+  return (
+    <div
+      className={`flex justify-center items-center ${small ? "h-10" : "h-12"} ${
+        small ? "w-18" : "w-28"
+      } ${
+        small ? "p-2" : "p-0"
+      } gap-2 border-solid border-2 border-gray rounded-md`}
+    >
       <button disabled={quantidade < 2} onClick={decrement}>
         <svg
           className="my-1"
@@ -35,5 +39,5 @@ export default function Count({small}) {
         </svg>
       </button>
     </div>
-    )
+  );
 }
