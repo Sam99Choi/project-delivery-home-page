@@ -70,6 +70,10 @@ export const BagProvider = ({children}) => {
     setProducts(products.filter(item => item.id !== currentDish.id))
   }
 
+  const totalPrice = products.reduce((acc, product) => {
+    return acc + parseFloat(product.totalPrice);
+  }, 0).toFixed(2);
+
   return (<BagContext.Provider value={
     {
       products,
@@ -80,7 +84,8 @@ export const BagProvider = ({children}) => {
       modalPrice,
       setModalPrice,
       currentDish,
-      setCurrentDish
+      setCurrentDish,
+      totalPrice
     }
   }> {children} </BagContext.Provider>);
 }
