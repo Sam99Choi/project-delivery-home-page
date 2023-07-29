@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Contador from "../Restaurante/Contador";
 import { useBagProvider } from "@/providers/BagContext/Provider";
 import Image from "next/image";
@@ -7,9 +6,9 @@ export default function Item({title, price, product}) {
   const {
     removeProduct,
     currentDish,
-    modalPrice,
+    increment,
+    decrement,
   } = useBagProvider();
-  const [quantity, setQuantity] = useState(1);
 
   return (
     <div>
@@ -22,8 +21,8 @@ export default function Item({title, price, product}) {
           <Contador
             small
             quantity={product.quantity}
-            increment={() => setQuantity(quantity + 1)}
-            decrement={() => setQuantity(quantity - 1)}
+            increment={() => increment(product)}
+            decrement={() => decrement(product)}
           />
           <button
             onClick={() => removeProduct(currentDish)}

@@ -6,14 +6,35 @@ export const BagProvider = ({children}) => {
   const [products, setProducts] = useState([]);
   const [currentDish, setCurrentDish] = useState({})
   const [modalPrice, setModalPrice] = useState(currentDish.price);
-  const [finalPrice, setFinalPrice] = useState()
-
-  const increment = () => {
-    setQuantity(quantity + 1)
+  
+  const increment = (currentDish, quantity = 1) => {
+    const newProducts = products.map((product) => {
+      if (product.id === currentDish.id) {
+        return {
+          ...product,
+          quantity: product.quantity += quantity,
+          totalPrice: (product.price * product.quantity).toFixed(2),
+        };
+      } else {
+        return product;
+      }
+    });
+    setProducts(newProducts);
   }
 
-  const decrement = () => {
-    setQuantity(quantity - 1)
+  const decrement = (currentDish, quantity = 1) => {
+    const newProducts = products.map((product) => {
+      if (product.id === currentDish.id) {
+        return {
+          ...product,
+          quantity: product.quantity -= quantity,
+          totalPrice: (product.price * product.quantity).toFixed(2),
+        };
+      } else {
+        return product;
+      }
+    });
+    setProducts(newProducts);
   }
 
   const addProduct = (currentDish, quantity) => {
