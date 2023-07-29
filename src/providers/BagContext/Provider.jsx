@@ -6,7 +6,7 @@ export const BagContext = createContext({});
     const [products, setProducts] = useState([]);
     const [currentDish, setCurrentDish] = useState({})
     const [modalPrice, setModalPrice] = useState(currentDish.price);
-    const [quantity, setQuantity] = useState(1) 
+    // const [quantity, setQuantity] = useState(1) 
     const [finalPrice, setFinalPrice] = useState()
 
     const increment = () => {
@@ -17,8 +17,7 @@ export const BagContext = createContext({});
         setQuantity(quantity - 1)
     }
 
-///*
-    const addProduct = (currentDish) => {
+    const addProduct = (currentDish, quantity) => {
         const dish = products.filter((item) => item.id === currentDish.id)[0];
         
         if (!!dish) {
@@ -26,7 +25,7 @@ export const BagContext = createContext({});
                 if (product.id === currentDish.id) {
                     return { 
                         ...product, 
-                        quantity: product.quantity += 1 
+                        quantity: product.quantity += quantity 
                     };
                 } else {
                     return product;
@@ -35,7 +34,7 @@ export const BagContext = createContext({});
             setProducts(newProducts);
         } else {
             const newDish = { ...currentDish };
-            newDish.quantity = 1; 
+            newDish.quantity = quantity; 
             setProducts([...products, newDish]);
         }
     };
@@ -46,7 +45,7 @@ export const BagContext = createContext({});
     }       
 
     return (
-        <BagContext.Provider value={{products, addProduct, removeProduct, increment, decrement, quantity, setQuantity, modalPrice, setModalPrice, currentDish, setCurrentDish}}>
+        <BagContext.Provider value={{products, addProduct, removeProduct, increment, decrement, modalPrice, setModalPrice, currentDish, setCurrentDish}}>
             {children}
         </BagContext.Provider> 
     );

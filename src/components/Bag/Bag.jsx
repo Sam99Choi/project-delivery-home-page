@@ -29,18 +29,18 @@ export default function Bag({ bagOpen, setBagOpen }) {
             
             {products.map((product, index) => {
               return (
-                <>                  
-                 <h2>
+                <div key={index}>            
+                 {/* <h2>
                     <span>quantity</span>: {product.quantity}
-                  </h2>
-                  <Item key={index} products={product} />
-                </>
+                  </h2> */}
+                  <Item product={product} />
+                </div>
               );
             })}
             
             <SubPrice />
 
-            <div className=" fixed bottom-0 flex-col w-[400px] h-[100px] bg-branco space-y-3 z-10 text-cinza-h2">
+            <div className="fixed bottom-0 flex-col w-[400px] h-[100px] bg-branco space-y-3 z-10 text-cinza-h2">
               <div className="flex justify-between font-semibold ">
                 <p className="text-lg ">Total</p>
                 <span className="">R$ {modalPrice}</span>

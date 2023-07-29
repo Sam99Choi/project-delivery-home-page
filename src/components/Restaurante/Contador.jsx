@@ -2,10 +2,7 @@ import { BagProvider, useBagProvider } from '@/providers/BagContext/Provider';
 import { useContext } from 'react';
 import { useState } from 'react';
 
-
-//addCount, decCount, quantity,  //{quantity}
-export default function Contador({small, disabled}) {
-  const { increment, decrement, quantity } = useBagProvider()
+export default function Contador({small, disabled, quantity, increment, decrement}) {
 
   return (
     <div className={`flex justify-center items-center ${small ? 'h-10' : 'h-12' } ${small ? 'w-18' : 'w-28' } ${small ? 'p-2' : 'p-0'} gap-2 border-solid border-2 border-gray rounded-md`}>

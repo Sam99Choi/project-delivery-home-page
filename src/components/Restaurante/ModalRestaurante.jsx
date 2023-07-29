@@ -9,9 +9,9 @@ import { useBagProvider } from "@/providers/BagContext/Provider";
 
 
 export default function ModalRestaurante({ isOpen, setOpen, currentDish, currentRestaurant }) {
-  //const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(1);
 
-  const { addProduct, quantity, setQuantity, modalPrice, setModalPrice } = useBagProvider();
+  const { addProduct, modalPrice, setModalPrice } = useBagProvider();
 
   useEffect(
     () => {
@@ -21,14 +21,12 @@ export default function ModalRestaurante({ isOpen, setOpen, currentDish, current
   );
 
   useEffect(
-    () => {
-      setQuantity(1)
-    },
-   [isOpen]
+    () => setQuantity(1),
+    [isOpen]
   );
 
-  const handleAddToCart = (currentDish) => {
-    addProduct(currentDish);
+  const handleAddToCart = (currentDish, quantity) => {
+    addProduct(currentDish, quantity);
     setOpen(!isOpen)
   }
  
@@ -86,11 +84,11 @@ export default function ModalRestaurante({ isOpen, setOpen, currentDish, current
               
                 <footer className=" absolute bottom-2 right-2 flex items-center h-20 p-5 pr-0 gap-6 mr-8 border-solid border-t-2 border-gray">
                   <Contador 
-                    quantity= {quantity} 
-                    increment = {() => setQuantity(quantity + 1)}
-                    decrement = {() => setQuantity(quantity - 1)}
+                    quantity={quantity} 
+                    increment={() => setQuantity(quantity + 1)}
+                    decrement={() => setQuantity(quantity - 1)}
                   />
-                  <button onClick={() => handleAddToCart(currentDish)}>
+                  <button onClick={() => handleAddToCart(currentDish, quantity)}>
                     <Botao label='Adicionar' currency="R$ " priceModal={modalPrice} />
                   </button>
                   

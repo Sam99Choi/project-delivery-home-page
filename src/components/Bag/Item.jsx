@@ -3,7 +3,7 @@ import Contador from "../Restaurante/Contador";
 import { useBagProvider } from "@/providers/BagContext/Provider";
 import Image from "next/image";
 
-export default function Item(title, price) {
+export default function Item({title, price, product}) {
   const {
     removeProduct,
     products,
@@ -24,7 +24,7 @@ export default function Item(title, price) {
         <div className="flex gap-3">
           <Contador
             small
-            quantity={quantity}
+            quantity={product.quantity}
             increment={() => setQuantity(quantity + 1)}
             decrement={() => setQuantity(quantity - 1)}
           />
