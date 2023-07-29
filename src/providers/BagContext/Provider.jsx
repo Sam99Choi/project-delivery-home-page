@@ -24,7 +24,8 @@ export const BagProvider = ({children}) => {
         if (product.id === currentDish.id) {
           return {
             ...product,
-            quantity: product.quantity += quantity
+            quantity: product.quantity += quantity,
+            totalPrice: (product.price * product.quantity).toFixed(2),
           };
         } else {
           return product;
@@ -36,6 +37,7 @@ export const BagProvider = ({children}) => {
         ...currentDish
       };
       newDish.quantity = quantity;
+      newDish.totalPrice = (newDish.price * newDish.quantity).toFixed(2);
       setProducts([
         ...products,
         newDish
