@@ -30,10 +30,6 @@ export default function ModalRestaurante({ isOpen, setOpen, currentDish, current
     setOpen(!isOpen)
   }
  
-  //const handleChangePrice = () => {
-    //setModalPrice((currentDish.price * quantity).toFixed(2));
-    //setModalPrice((currentDish.price * quantidade).toFixed(2));
-  //};
   
   if (isOpen) {
     return (

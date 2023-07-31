@@ -15,7 +15,7 @@ export default function Bag({ bagOpen, setBagOpen }) {
     setQuantity,
     currentDish,
     modalPrice,
-    totalPrice
+    totalPrice,
   } = useBagProvider();
 
   if (bagOpen) {
@@ -28,8 +28,7 @@ export default function Bag({ bagOpen, setBagOpen }) {
                 {`Sua sacola está vazia :'(`}
               </p>
             )}
-
-            <Local local="Nome do Restaurante" />
+            {products.length > 0 && <Local local="Nome do Restaurante" />}
 
             {products.map((product, index) => {
               return (
@@ -44,15 +43,17 @@ export default function Bag({ bagOpen, setBagOpen }) {
 
             <SubPrice />
 
-            <div className="fixed bottom-0 flex-col w-[400px] h-[100px] bg-branco space-y-3 z-10 text-cinza-h2">
-              <div className="flex justify-between font-semibold ">
-                <p className="text-lg ">Total</p>
-                <span className="">R$ {totalPrice}</span>
+            {products.length > 0 && (
+              <div className="fixed bottom-0 flex-col w-[400px] h-[100px] bg-branco space-y-3 z-10 text-cinza-h2">
+                <div className="flex justify-between font-semibold ">
+                  <p className="text-lg ">Total</p>
+                  <span className="">R$ {totalPrice}</span>
+                </div>
+                <div className="flex-1 justify-center items-center mt-2">
+                  <Botao bigger label="Finalizar Pedido" />
+                </div>
               </div>
-              <div className="flex-1 justify-center items-center mt-2">
-                <Botao bigger label="Finalizar Pedido" />
-              </div>
-            </div>
+            )}
           </div>
         </div>
         <button
