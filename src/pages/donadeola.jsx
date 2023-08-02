@@ -93,6 +93,8 @@ const pratos = [
 export default function Deola() {
   const [open, setOpen] = useState(false);
   const [currentDish, setCurrentDish] = useState({});
+  const { restaurante } = useBagProvider();
+
 
   return (
     <div>

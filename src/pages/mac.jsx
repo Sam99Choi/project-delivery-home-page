@@ -83,7 +83,7 @@ export const getServerSideProps = async () => {
   ];
 
   const restaurante = {
-    title:"Bullguer - Santana",
+    title:"McDonalds - Paulista",
     time: "20 - 30 min" ,
     delivery: "Grátis"
   }

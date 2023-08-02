@@ -21,7 +21,7 @@ export default function InfoHeader(props){
                     </div>
                     <div>
                         <h2 className="flex justify-end font-medium text-cinza-200">
-                            Frete: {delivery} 
+                            Frete: R$ {delivery} 
                         </h2>
                     </div>
                 </div>

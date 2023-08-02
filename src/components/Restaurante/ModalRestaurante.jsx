@@ -6,18 +6,21 @@ import Contador from "./Contador";
 import X from "./X";
 import { useBagProvider } from "@/providers/BagContext/Provider";
 
+export default function ModalRestaurante({ isOpen, setOpen, currentRestaurant}) {
 
-
-export default function ModalRestaurante({ isOpen, setOpen, currentDish, currentRestaurant }) {
   const [quantity, setQuantity] = useState(1);
 
-  const { addProduct, modalPrice, setModalPrice } = useBagProvider();
+  const { addProduct, modalPrice, setModalPrice, currentDish, dados, setDados} = useBagProvider();
+
+  const guardarDados = () => {
+    setDados(props.restaurante)
+  } 
 
   useEffect(
     () => {
       setModalPrice((currentDish.price*quantity).toFixed(2))
     }, 
-    [currentDish.price, quantity]
+    [currentDish.price, quantity, setModalPrice]
   );
 
   useEffect(
@@ -25,8 +28,9 @@ export default function ModalRestaurante({ isOpen, setOpen, currentDish, current
     [isOpen]
   );
 
-  const handleAddToCart = (currentDish, quantity) => {
-    addProduct(currentDish, quantity);
+
+  const handleAddToCart = (currentDish, quantity, currentRestaurant) => {
+    addProduct(currentDish, quantity, currentRestaurant);
     setOpen(!isOpen)
   }
  
@@ -55,7 +59,7 @@ export default function ModalRestaurante({ isOpen, setOpen, currentDish, current
                 </div>
                 <div className="flex justify-center items-center w-full px-10 my-3">
                   <p className="flex justify-start items-center w-full h-auto text-cinza-h2 text-xs font-medium">
-                    <span>{currentDish.price} </span> 
+                    <span>R$ {currentDish.price} </span> 
                   </p>
                 </div>
               </div>
@@ -84,7 +88,7 @@ export default function ModalRestaurante({ isOpen, setOpen, currentDish, current
                     increment={() => setQuantity(quantity + 1)}
                     decrement={() => setQuantity(quantity - 1)}
                   />
-                  <button onClick={() => handleAddToCart(currentDish, quantity)}>
+                  <button onClick={() => handleAddToCart(currentDish, quantity, currentRestaurant)}>
                     <Botao label='Adicionar' currency="R$ " priceModal={modalPrice} />
                   </button>
                   

@@ -6,15 +6,17 @@ import Logo from "./Logo";
 import CartLogo from "./Header-icons/CartLogo";
 import { useState } from "react";
 import Bag from "../Bag/Bag";
+import { useBagProvider } from "@/providers/BagContext/Provider";
 
 export default function HeaderItems() {
+  const { open, setOpen } = useBagProvider()
+  //const [open, setOpen] = useState(false)
 
-  const [open, setOpen] = useState(false)
 
   return (
     <div>
     <header>
-      <div className="flex items-center w-full h-20 p-8 gap-6 shadow-sm fixed">
+      <div className="flex items-center w-full h-16 md:h-20 p-8 gap-6 shadow-sm fixed">
         <Link href={"/"}>
           <Logo />
         </Link>

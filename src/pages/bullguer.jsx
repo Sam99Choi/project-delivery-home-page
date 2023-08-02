@@ -9,6 +9,7 @@ import { useBagProvider } from "@/providers/BagContext/Provider";
 import { useState } from "react";
 
 export const getServerSideProps = async () => {
+  
   const pratos = [
     {
       id: 1,
@@ -85,7 +86,7 @@ export const getServerSideProps = async () => {
   const restaurante = {
     title:"Bullguer - Santana",
     time: "20 - 30 min" ,
-    delivery: "Grátis"
+    delivery: '00.00'
   }
   
   return { 
@@ -98,8 +99,7 @@ export const getServerSideProps = async () => {
 
 export default function Bullguer(props) {
   const [open, setOpen] = useState(false);
-  //const [currentDish, setCurrentDish] = useState({});
-  const {currentDish, setCurrentDish} = useBagProvider()
+  const {currentDish, setCurrentDish, atualizarDados, dados, setDados} = useBagProvider()
 
   return (
     <div className="">
@@ -148,6 +148,7 @@ export default function Bullguer(props) {
         setOpen={setOpen} 
         currentDish={currentDish} 
         currentRestaurant={props.restaurante} 
+        handleReceberDados={dados}
       />
     </div>
   );

@@ -5,8 +5,6 @@ export default function Botao({
   label,
   currency,
   bigger,
-  isOpen,
-  setOpen,
 }) {
   const { addProduct, products } = useBagProvider();
 
