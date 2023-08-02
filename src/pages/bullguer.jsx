@@ -148,7 +148,6 @@ export default function Bullguer(props) {
         setOpen={setOpen} 
         currentDish={currentDish} 
         currentRestaurant={props.restaurante} 
-        handleReceberDados={dados}
       />
     </div>
   );

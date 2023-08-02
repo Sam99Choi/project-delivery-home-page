@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function DestaquePedidos() {
   return(
     <div className="flex items-center justify-center gap-4 w-full px-10 py-5">
-      <Link href={""}>
+      <Link href={"/"}>
         <Image
           className="rounded-2xl hover:-translate-y-0.5 transition shadow-cinza-200 shadow-md"
           src="/../public/images/frango.avif"
@@ -13,7 +13,7 @@ export default function DestaquePedidos() {
           height={100}
           />
       </Link>
-      <Link href={""}>
+      <Link href={"/"}>
         <Image
           className="rounded-2xl hover:-translate-y-0.5 transition shadow-cinza-200 shadow-md"
           src="/../public/images/hamburguer.avif"
@@ -22,7 +22,7 @@ export default function DestaquePedidos() {
           height={100}
           />
       </Link>
-      <Link href={""}>
+      <Link href={"/"}>
         <Image
           className="rounded-2xl hover:-translate-y-0.5 transition shadow-cinza-200 shadow-md"
           src="/../public/images/macarrao.jpg"
