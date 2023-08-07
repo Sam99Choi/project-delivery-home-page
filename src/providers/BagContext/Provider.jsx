@@ -10,10 +10,6 @@ export const BagProvider = ({ children }) => {
   
   const [dados, setDados] = useState(null);
 
-  const atualizarDados = (currentRestaurant) => {
-    setDados(currentRestaurant.title);
-  };
-
   const increment = (currentDish, quantity = 1) => {
     const newProducts = products.map((product) => {
       if (product.id === currentDish.id) {
@@ -105,7 +101,6 @@ export const BagProvider = ({ children }) => {
         setOpen,
         dados,
         setDados,
-        atualizarDados,
       }}
     >
       {" "}
