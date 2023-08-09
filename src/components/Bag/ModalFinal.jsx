@@ -15,7 +15,7 @@ export default function ModalFinal({ modalOpen, setModalOpen }) {
 
   if (modalOpen) {
     return (
-      <div onClick={() => setModalOpen(!modalOpen)} className="fixed inset-0 flex justify-center items-center shadow z-50 bg-modal ">
+      <div className="fixed inset-0 flex justify-center items-center shadow z-50 bg-modal ">
         <div className=" fixed flex flex-col justify-center items-center space-y-4 w-[300px] h-[170px] bg-branco rounded">
           <h1 className="flex justify-center items-center w-full mb-4 text-lg font-medium">
             Deseja finalizar o pedido?

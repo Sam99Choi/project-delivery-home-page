@@ -2,7 +2,7 @@ import Logo from "../header/Logo";
 
 export default function Footer() {
   return(
-    <div className=" flex gap-3 mt-12 px-4">
+    <div className=" flex gap-3 mt-12 px-4 ">
       <div>
         <Logo />
       </div>
