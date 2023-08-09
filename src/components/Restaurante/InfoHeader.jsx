@@ -11,7 +11,7 @@ export default function InfoHeader(props) {
           <img
             src={imageURL}
             alt="logo"
-            className="flex items-center mr-5 rounded-full w-[75px] h-[75px]"
+            className="flex items-center mb-1 sm:mb-0 sm:mr-5   rounded-full w-[75px] h-[75px]"
           />
 
           <div className="flex flex-grow /lg:w-[800px] /bg-cinza ">
