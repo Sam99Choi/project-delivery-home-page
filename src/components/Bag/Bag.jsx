@@ -41,7 +41,7 @@ export default function Bag({ bagOpen, setBagOpen,  }) {
             )}
             {products.length > 0 && <Local/>}
 
-            <div className="flex flex-col overflow-auto w-full /px-5 /sm:pl-[38px] /sm:pr-10  md:max-h-[216px] xl:max-h-[327px] ">
+            <div className="flex flex-col overflow-auto w-full max-h-80  /md:max-h-[216px] /lg:max-h-[] /lg:max-h-[327px] ">
             {products.map((product, index) => {
               return (
                 <div key={index}>
@@ -57,7 +57,7 @@ export default function Bag({ bagOpen, setBagOpen,  }) {
             {products.length > 0 && (
               <div className="flex justify-center w-full min-h-max">
                 <SubPrice />
-              <div className="fixed  bottom-0 flex flex-col w-full px-8 /sm:px-0 sm:w-[400px] h-[100px] /bg-cinza-200 space-y-3 z-10 text-cinza-h2">
+              <div className="fixed  bottom-0 flex flex-col w-full px-8 sm:px-0 sm:w-[400px] h-[100px] /bg-cinza-200 space-y-3 z-10 text-cinza-h2">
                 <div className="flex justify-between font-semibold ">
                   <p className="text-lg ">Total</p>
                   <span className="">R$ {subPrice}</span>

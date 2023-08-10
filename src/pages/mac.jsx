@@ -96,7 +96,7 @@ export const getServerSideProps = async () => {
   const restaurante = {
     title: "McDonalds - Paulista",
     time: "20-30 min",
-    delivery: "00.00",
+    delivery: "10.99",
   };
 
   return {
