@@ -13,7 +13,7 @@ export const getServerSideProps = async () => {
   const pratos = [
     {
       id: 1,
-      title: "McOferta Big Tasty",
+      title: "Big Tasty",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "35.90",
@@ -21,7 +21,7 @@ export const getServerSideProps = async () => {
     },
     {
       id: 2,
-      title: "McOferta Big Mac",
+      title: "Big Mac",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "26.90",
@@ -29,7 +29,7 @@ export const getServerSideProps = async () => {
     },
     {
       id: 3,
-      title: "McOferta Quarteirão",
+      title: "Quarteirão",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odiolabore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
@@ -37,7 +37,7 @@ export const getServerSideProps = async () => {
     },
     {
       id: 4,
-      title: "McOferta McChicken",
+      title: "McChicken",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
@@ -45,7 +45,7 @@ export const getServerSideProps = async () => {
     },
     {
       id: 5,
-      title: "McOferta Cheddar McMelt",
+      title: "Cheddar McMelt",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odiolabore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
@@ -53,7 +53,7 @@ export const getServerSideProps = async () => {
     },
     {
       id: 6,
-      title: "McOferta McNífico",
+      title: "McNífico",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
@@ -61,7 +61,7 @@ export const getServerSideProps = async () => {
     },
     {
       id: 7,
-      title: "McOferta Crispy Chicken",
+      title: "Crispy Chicken",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
@@ -69,7 +69,7 @@ export const getServerSideProps = async () => {
     },
     {
       id: 8,
-      title: "McOferta Chicken McNuggets",
+      title: "Chicken McNuggets",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
@@ -162,10 +162,6 @@ export default function Mac(props) {
       />
       
       <Footer/>
-
-      
-
-      
     </div>
   );
 

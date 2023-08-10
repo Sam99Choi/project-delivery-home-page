@@ -11,9 +11,9 @@ export default function Botao({
   return (
     <div className="flex ">
       <button
-        className={`${bigger ? "w-full" : "md:w-40 lg:w-60"} h-12 flex items-center ${
+        className={`${bigger ? "w-full" : "w-60 sm:w-40 lg:w-60"} h-12 flex items-center ${
           bigger ? "justify-center" : "justify-between"
-        }  bg-vermelho sm:px-2 lg:px-5 gap-1 text-branco font-medium rounded-md hover:bg-opacity-80`}
+        }  bg-vermelho px-5 sm:px-2 lg:px-5 /gap-1 text-branco font-medium rounded-md hover:bg-opacity-80`}
       >
         {label}
         <span>

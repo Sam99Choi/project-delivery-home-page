@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer/Footer";
 import Header from "@/components/header/Header";
 import Banner from "@/components/Restaurante/Banner";
 import SearchFood from "@/components/Restaurante/Busca";
@@ -12,88 +13,88 @@ export const getServerSideProps = async () => {
   const pratos = [
     {
       id: 1,
-      title: "Pão Delícia",
+      title: "Bib'sfiha de Carne",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "35.90",
-      imageURL: "/images-restaurant/donadeola/PaoDelicia.png",
+      imageURL: "/images-restaurant/habibs/carne.png",
     },
     {
       id: 2,
-      title: "Mini pão de queijo (10 unidades)",
+      title: "Bib'sfiha de Frango",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "26.90",
-      imageURL: "/images-restaurant/donadeola/PaoDeQueijo.png",
+      imageURL: "/images-restaurant/habibs/frango.png",
     },
     {
       id: 3,
-      title: "Pão Francês na chapa",
+      title: "Bib'sfiha de Calabresa com Mussarela",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
-      imageURL: "/images-restaurant/donadeola/PaoFrances.png",
+      imageURL: "/images-restaurant/habibs/calabresamussarela.png",
     },
     {
       id: 4,
-      title: "Empada de frango",
+      title: "Bib'sfiha de Queijo",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odiolabore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
-      imageURL: "/images-restaurant/donadeola/EmpadaDeFrango.png",
+      imageURL: "/images-restaurant/habibs/queijo.png",
     },
     {
       id: 5,
-      title: "Pão Francês (5 unidades)",
+      title: "Bib'sfiha Italianinha",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odiolabore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
-      imageURL: "/images-restaurant/donadeola/PaoFrances5.png",
+      imageURL: "/images-restaurant/habibs/italianinha.png",
     },
     {
       id: 6,
-      title: "Mini Pão Delícia (5 unidades)",
+      title: "Bib'sfiha de Carne com Mussarela",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
-      imageURL: "/images-restaurant/donadeola/MiniPao.png",
+      imageURL: "/images-restaurant/habibs/carnemussarela.png",
     },
     {
       id: 7,
-      title: "Copan",
+      title: "Bib'sfiha de Frango Cremely",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
-      imageURL: "/images-restaurant/donadeola/Copan.png",
+      imageURL: "/images-restaurant/habibs/frangocremely.png",
     },
     {
       id: 8,
-      title: "Pinacoteca",
+      title: "Bib'sfiha de Espinafre",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
-      imageURL: "/images-restaurant/donadeola/Pinacoteca.png",
+      imageURL: "/images-restaurant/habibs/espinafre.png",
     },
     {
       id: 9,
-      title: "Mini Pudim de Doce de Leite",
+      title: "Bib'sfiha de Quatro Queijos",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
-      imageURL: "/images-restaurant/donadeola/MiniPudim.png",
+      imageURL: "/images-restaurant/habibs/quatroqueijos.png",
     },
     {
       id: 10,
-      title: "Café Expresso",
+      title: "Esfiha Folhada de Chocolate",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
-      imageURL: "/images-restaurant/donadeola/CafeExpresso.png",
+      imageURL: "/images-restaurant/habibs/chocolate.png",
     },
   ];
 
   const restaurante = {
-    title:"Dona Deôla - Higienopolis",
+    title:"Habib's - Bom Retiro",
     time:"15 - 20 min",
     delivery:"00.00",
   };
@@ -118,10 +119,10 @@ export default function Habibs(props) {
 
       <div className=" flex flex-col items-center justify-center">
         <Banner 
-          imageURL="images-restaurant/donadeola/BannerDeola.png"
+          imageURL="images-restaurant/habibs/Header.png"
         />
         <InfoHeader 
-         imageURL="images-restaurant/donadeola/DonaDeola.png"
+         imageURL="images-restaurant/habibs/logo.png"
          title={props.restaurante.title} 
          time={props.restaurante.time} 
          delivery={props.restaurante.delivery} 
@@ -158,6 +159,7 @@ export default function Habibs(props) {
         currentDish={currentDish} 
         currentRestaurant={props.restaurante} 
       />
+      <Footer/>
     </div>
   );
 

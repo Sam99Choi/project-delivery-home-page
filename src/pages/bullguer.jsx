@@ -123,7 +123,7 @@ export default function Bullguer(props) {
       <div className="flex flex-col justify-center items-center">
         <Cardapio />
 
-        <div className="flex flex-wrap justify-center items-center w-full gap-2 lg:gap-6 mb-1">
+        <div className="flex flex-wrap justify-center items-center w-full gap-2 lg:gap-6  mb-1">
         {
           props.pratos.length > 0 
           ? props.pratos.map((prato) => (

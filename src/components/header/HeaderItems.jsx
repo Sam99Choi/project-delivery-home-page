@@ -16,7 +16,7 @@ export default function HeaderItems() {
   return (
     <div>
     <header>
-      <div className="flex items-center w-full h-16 md:h-20 p-8 gap-6 shadow-sm fixed">
+      <div className="flex items-center w-full max-h-20 /min-h-20 p-8 gap-6 bg-branco shadow-sm fixed">
         <Link href={"/"}>
           <Logo />
         </Link>

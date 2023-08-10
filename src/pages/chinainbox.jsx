@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer/Footer";
 import Header from "@/components/header/Header";
 import Banner from "@/components/Restaurante/Banner";
 import SearchFood from "@/components/Restaurante/Busca";
@@ -12,59 +13,59 @@ export const getServerSideProps = async () => {
   const pratos = [
     {
       id: 1,
-      title: "Pão Delícia",
+      title: "Yakisoba",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "35.90",
-      imageURL: "/images-restaurant/donadeola/PaoDelicia.png",
+      imageURL: "/images-restaurant/chinainbox/yakisobabowl.png",
     },
     {
       id: 2,
-      title: "Mini pão de queijo (10 unidades)",
+      title: "Macarrão Oriental Xian",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "26.90",
-      imageURL: "/images-restaurant/donadeola/PaoDeQueijo.png",
+      imageURL: "/images-restaurant/chinainbox/macarraoorientalxian.png",
     },
     {
       id: 3,
-      title: "Pão Francês na chapa",
+      title: "Macarrão Oriental Taiwan",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
-      imageURL: "/images-restaurant/donadeola/PaoFrances.png",
+      imageURL: "/images-restaurant/chinainbox/macarraoorientaltaiwan.png",
     },
     {
       id: 4,
-      title: "Empada de frango",
+      title: "Bowl Frango Tarê",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odiolabore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
-      imageURL: "/images-restaurant/donadeola/EmpadaDeFrango.png",
+      imageURL: "/images-restaurant/chinainbox/bowlfrangotare.png",
     },
     {
       id: 5,
-      title: "Pão Francês (5 unidades)",
+      title: "Bowl Frango Crispy",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odiolabore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
-      imageURL: "/images-restaurant/donadeola/PaoFrances5.png",
+      imageURL: "/images-restaurant/chinainbox/bowlfrangocrispy.png",
     },
     {
       id: 6,
-      title: "Mini Pão Delícia (5 unidades)",
+      title: "Yakisoba Vegetariano",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
-      imageURL: "/images-restaurant/donadeola/MiniPao.png",
+      imageURL: "/images-restaurant/chinainbox/yakisobavegetariano.png",
     },
     {
       id: 7,
-      title: "Copan",
+      title: "Yakisoba de Camarão",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
-      imageURL: "/images-restaurant/donadeola/Copan.png",
+      imageURL: "/images-restaurant/chinainbox/yakisobadecamarao.png",
     },
     {
       id: 8,
@@ -72,7 +73,7 @@ export const getServerSideProps = async () => {
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
-      imageURL: "/images-restaurant/donadeola/Pinacoteca.png",
+      imageURL: "/images-restaurant/chinainbox/pokecamaraocrispy.png",
     },
     {
       id: 9,
@@ -80,20 +81,20 @@ export const getServerSideProps = async () => {
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
-      imageURL: "/images-restaurant/donadeola/MiniPudim.png",
+      imageURL: "/images-restaurant/chinainbox/pokesalmaogrelhado.png",
     },
     {
       id: 10,
-      title: "Café Expresso",
+      title: "Gyoza",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
-      imageURL: "/images-restaurant/donadeola/CafeExpresso.png",
+      imageURL: "/images-restaurant/chinainbox/gyoza.png",
     },
   ];
 
   const restaurante = {
-    title:"Dona Deôla - Higienopolis",
+    title:"China in Box - Bom Retiro",
     time:"15 - 20 min",
     delivery:"00.00",
   };
@@ -118,10 +119,10 @@ export default function ChinaInBox(props) {
 
       <div className=" flex flex-col items-center justify-center">
         <Banner 
-          imageURL="images-restaurant/donadeola/BannerDeola.png"
+          imageURL="images-restaurant/chinainbox/banner.png"
         />
         <InfoHeader 
-         imageURL="images-restaurant/donadeola/DonaDeola.png"
+         imageURL="images-restaurant/chinainbox/logochina.png"
          title={props.restaurante.title} 
          time={props.restaurante.time} 
          delivery={props.restaurante.delivery} 
@@ -158,6 +159,8 @@ export default function ChinaInBox(props) {
         currentDish={currentDish} 
         currentRestaurant={props.restaurante} 
       />
+
+      <Footer/>
     </div>
   );
 
