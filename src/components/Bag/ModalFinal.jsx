@@ -1,17 +1,16 @@
-import { useBagProvider } from "@/providers/BagContext/Provider"
+import { useBagProvider } from "@/providers/BagContext/Provider";
+import Link from "next/link";
 
 export default function ModalFinal({ modalOpen, setModalOpen }) {
-    const { setProducts, open, setOpen } = useBagProvider()
+  const { setProducts, open, setOpen } = useBagProvider();
 
-    const pedidoAceito = () => {
-        setModalOpen(!modalOpen),
-        setProducts([]),
-        setOpen (!open)
-    }
+  const pedidoAceito = () => {
+    setModalOpen(!modalOpen), setProducts([]), setOpen(!open);
+  };
 
-    const pedidoNaoFinalizado = () => {
-        setModalOpen(!modalOpen)
-    }
+  const pedidoNaoFinalizado = () => {
+    setModalOpen(!modalOpen);
+  };
 
   if (modalOpen) {
     return (
@@ -21,12 +20,14 @@ export default function ModalFinal({ modalOpen, setModalOpen }) {
             Deseja finalizar o pedido?
           </h1>
           <div className="flex justify-center w-full gap-5 text-branco ">
-            <button
-              onClick={() => pedidoAceito()}
-              className="bg-vermelho px-5 py-3 rounded-md hover:bg-opacity-80"
-            >
-              Sim
-            </button>
+            <Link href="/">
+              <button
+                onClick={() => pedidoAceito()}
+                className="bg-vermelho px-5 py-3 rounded-md hover:bg-opacity-80"
+              >
+                Sim
+              </button>
+            </Link>
             <button
               onClick={() => pedidoNaoFinalizado()}
               className="bg-vermelho px-5 py-3 rounded-md hover:bg-opacity-80"
