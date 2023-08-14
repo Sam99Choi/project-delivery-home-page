@@ -12,7 +12,7 @@ import { useState } from "react";
 export const getServerSideProps = async () => {
   const pratos = [
     {
-      id: 1,
+      id: 31,
       title: "Bib'sfiha de Carne",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -20,7 +20,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/habibs/carne.png",
     },
     {
-      id: 2,
+      id: 32,
       title: "Bib'sfiha de Frango",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -28,7 +28,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/habibs/frango.png",
     },
     {
-      id: 3,
+      id: 33,
       title: "Bib'sfiha de Calabresa com Mussarela",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -36,7 +36,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/habibs/calabresamussarela.png",
     },
     {
-      id: 4,
+      id: 34,
       title: "Bib'sfiha de Queijo",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odiolabore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -44,7 +44,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/habibs/queijo.png",
     },
     {
-      id: 5,
+      id: 35,
       title: "Bib'sfiha Italianinha",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odiolabore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -52,7 +52,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/habibs/italianinha.png",
     },
     {
-      id: 6,
+      id: 36,
       title: "Bib'sfiha de Carne com Mussarela",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -60,7 +60,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/habibs/carnemussarela.png",
     },
     {
-      id: 7,
+      id: 37,
       title: "Bib'sfiha de Frango Cremely",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -68,7 +68,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/habibs/frangocremely.png",
     },
     {
-      id: 8,
+      id: 38,
       title: "Bib'sfiha de Espinafre",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -76,7 +76,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/habibs/espinafre.png",
     },
     {
-      id: 9,
+      id: 39,
       title: "Bib'sfiha de Quatro Queijos",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -84,7 +84,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/habibs/quatroqueijos.png",
     },
     {
-      id: 10,
+      id: 40,
       title: "Esfiha Folhada de Chocolate",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",

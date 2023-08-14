@@ -106,7 +106,7 @@ export default function ModalRestaurante({
             </div>
 
             <footer className="/bg-vermelho mt-3 flex items-center justify-center w-full h-20 p-10 sm:p-5 sm:absolute sm:bottom-0 sm:right-0 md:justify-end /sm:justify-around sm:pr-10 ">
-              <div className=" /bg-cinza flex items-center justify-center h-20 w-full gap-6 overflow-hidden border-solid border-t-2  border-gray sm:justify- sm:ml-5 sm:gap-6 sm:w-full md:max-w-[300px] md:gap-6 md:ml-0 lg:max-w-sm xl:max-w-lg  ">
+              <div className=" /bg-cinza flex items-center justify-center  h-20 w-full gap-6 overflow-hidden border-solid border-t-2  border-gray sm:justify-end sm:ml-5 sm:gap-6 sm:w-full md:max-w-[300px] md:gap-6 md:ml-0 lg:max-w-sm xl:max-w-lg  ">
                 <Contador
                   quantity={quantity}
                   increment={() => setQuantity(quantity + 1)}

@@ -12,87 +12,87 @@ import { useState } from "react";
 export const getServerSideProps = async () => {
   const pratos = [
     {
-      id: 1,
+      id: 51,
       title:
         "Top Side, corte de cozão mole com arroz + 01 acompanhamento extra",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
-      price: "35,90",
+      price: "35.90",
       imageURL: "/images-restaurant/montana/TopSide.png",
     },
     {
-      id: 2,
+      id: 52,
       title: "Top side, corte de coxão mole com massa fettuccine + 01 molho",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
-      price: "26,90",
+      price: "26.90",
       imageURL: "/images-restaurant/montana/TopSideM.png",
     },
     {
-      id: 3,
+      id: 53,
       title:
         "Executivo de iscas de frango com arroz, feijão e + 01 extra de sua esolha",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
-      price: "49,99",
+      price: "49.99",
       imageURL: "/images-restaurant/montana/ExecutivoFrango.png",
     },
     {
-      id: 4,
+      id: 54,
       title:
         "Executivo de tiras de Alcatra, com arroz, feijão e + 01 extra a sua escolha",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odiolabore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
-      price: "49,99",
+      price: "49.99",
       imageURL: "/images-restaurant/montana/ExecutivoAlcatra.png",
     },
     {
-      id: 5,
+      id: 55,
       title: "Corte de Contra Filé + 03 acompanhamentos",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odiolabore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
-      price: "49,99",
+      price: "49.99",
       imageURL: "/images-restaurant/montana/ContraFile.png",
     },
     {
-      id: 6,
+      id: 56,
       title: "Parmegiana de Frango + 03 acompanhamentos extras",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
-      price: "49,99",
+      price: "49.99",
       imageURL: "/images-restaurant/montana/Parmegiana.png",
     },
     {
-      id: 7,
+      id: 57,
       title:
         "Montan Steak Angus (200g), corte angus + 03 acompanhamentos extras",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
-      price: "49,99",
+      price: "49.99",
       imageURL: "/images-restaurant/montana/Angus.png",
     },
     {
-      id: 8,
+      id: 58,
       title: "Filé de Frango Grelhado + 03 acompanhamentos extras",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
-      price: "49,99",
+      price: "49.99",
       imageURL: "/images-restaurant/montana/FileFrango.png",
     },
     {
-      id: 9,
+      id: 59,
       title: "Salada",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
-      price: "49,99",
+      price: "49.99",
       imageURL: "/images-restaurant/montana/Salada.png",
     },
     {
-      id: 10,
+      id: 60,
       title: "Strogonoff de frando com arroz e fritas montana",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
-      price: "49,99",
+      price: "49.99",
       imageURL: "/images-restaurant/montana/Strog.png",
     },
   ];

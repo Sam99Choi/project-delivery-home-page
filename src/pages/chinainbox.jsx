@@ -12,7 +12,7 @@ import { useState } from "react";
 export const getServerSideProps = async () => {
   const pratos = [
     {
-      id: 1,
+      id: 11,
       title: "Yakisoba",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -20,7 +20,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/chinainbox/yakisobabowl.png",
     },
     {
-      id: 2,
+      id: 12,
       title: "Macarrão Oriental Xian",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -28,7 +28,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/chinainbox/macarraoorientalxian.png",
     },
     {
-      id: 3,
+      id: 13,
       title: "Macarrão Oriental Taiwan",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -36,7 +36,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/chinainbox/macarraoorientaltaiwan.png",
     },
     {
-      id: 4,
+      id: 14,
       title: "Bowl Frango Tarê",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odiolabore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -44,7 +44,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/chinainbox/bowlfrangotare.png",
     },
     {
-      id: 5,
+      id: 15,
       title: "Bowl Frango Crispy",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odiolabore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -52,7 +52,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/chinainbox/bowlfrangocrispy.png",
     },
     {
-      id: 6,
+      id: 16,
       title: "Yakisoba Vegetariano",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -60,7 +60,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/chinainbox/yakisobavegetariano.png",
     },
     {
-      id: 7,
+      id: 17,
       title: "Yakisoba de Camarão",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -68,7 +68,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/chinainbox/yakisobadecamarao.png",
     },
     {
-      id: 8,
+      id: 18,
       title: "Pinacoteca",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -76,7 +76,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/chinainbox/pokecamaraocrispy.png",
     },
     {
-      id: 9,
+      id: 19,
       title: "Mini Pudim de Doce de Leite",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -84,7 +84,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/chinainbox/pokesalmaogrelhado.png",
     },
     {
-      id: 10,
+      id: 20,
       title: "Gyoza",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -94,7 +94,7 @@ export const getServerSideProps = async () => {
   ];
 
   const restaurante = {
-    title:"China in Box - Bom Retiro",
+    title:"China in Box - Santana",
     time:"15 - 20 min",
     delivery:"00.00",
   };

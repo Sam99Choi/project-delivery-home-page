@@ -84,7 +84,7 @@ export const getServerSideProps = async () => {
   ];
   
   const restaurante = {
-    title:"Bullguer - Santana",
+    title:"Bullguer - Barra Funda",
     time: "20 - 30 min" ,
     delivery: '00.00'
   }
