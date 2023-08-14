@@ -1,9 +1,10 @@
 import FreteGratis from "./TextFrete";
 import Salada from "./Salada";
-import RisotoOriental from "./RisotoOriental";
 import Sanduiche from "./Sanduiche";
 import BullguerLanche from "./BullguerLanche";
 import Esfiha from "./Esfiha";
+import Pudim from "./Pudim";
+import Link from "next/link";
 
 export default function ListaPratos() {
   return (
@@ -12,10 +13,10 @@ export default function ListaPratos() {
       <div className="py-5 flex w-ful gap-4">
         <Salada />
         <BullguerLanche />
-        <RisotoOriental />
+        <Pudim />
         <Sanduiche />
         <Esfiha />
-    </div>
+      </div>
     </div>
   );
 }
