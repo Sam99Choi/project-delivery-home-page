@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Frango() {
+export default function Frango({id}) {
   return (
     <div>
       <Link href={"/"}>
