@@ -9,8 +9,8 @@ import Montana from "./Montana";
 
 export default function ListaRestaurantes() {
   return (
-    <div className="flex flex-col items-start justify-start  ">
-      <div className="flex w-full  md:mx-[100px] lg:mx-[180px] ">
+    <div className="flex flex-col items-start justify-start">
+      <div className="flex w-full bg-vermelho  md:mx-[100px] lg:mx-[180px] ">
       <Restaurantes />
       </div>
      
