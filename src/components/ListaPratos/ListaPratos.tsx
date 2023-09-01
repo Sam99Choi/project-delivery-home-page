@@ -8,9 +8,11 @@ import Link from "next/link";
 
 export default function ListaPratos() {
   return (
-    <div className="mt-5 mx-[180px]">
-      <FreteGratis />
-      <div className="py-5 flex w-ful gap-4">
+    <div className="flex flex-col mt-5 md:mx-[100px]  lg:mx-[180px]">
+      <div className="pl-5 md:mx-0">
+        <FreteGratis />
+      </div>      
+      <div className="flex py-5 w-ful gap-4">
         <Salada />
         <BullguerLanche />
         <Pudim />

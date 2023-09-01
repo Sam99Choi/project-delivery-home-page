@@ -24,9 +24,9 @@ export default function Bag({ bagOpen, setBagOpen,  }) {
 
   if (bagOpen) {
     return (
-      <div className="fixed px-10 right-0 flex w-screen h-screen sm:w-[475px] sm:h-full z-50 mt-20 shadow-lg overflow-auto bg-branco border-solid border-t-2 border-l border-borda ">
+      <div className="fixed px-10 right-0 flex w-full h-full sm:w-[475px] sm:h-full z-50 mt-20 shadow-lg overflow-auto bg-branco border-solid border-t-2 border-l border-borda ">
         
-        <div className="flex flex-col justify-center items-center w-screen h-full bg-branco z-50 ">
+        <div className="flex flex-col justify-center items-center w-screen h-screen /h-full bg-branco z-50  ">
         <button
           onClick={() => setBagOpen(!bagOpen)}
           className="flex justify-start w-full items-start /bg-vermelho  absolute top-0 letf px-5 pt-2 sm:p-2  z-50 "
@@ -41,7 +41,7 @@ export default function Bag({ bagOpen, setBagOpen,  }) {
             )}
             {products.length > 0 && <Local/>}
 
-            <div className="flex flex-col overflow-auto w-full /px-5 /sm:pl-[38px] /sm:pr-10  md:max-h-[216px] xl:max-h-[327px] ">
+            <div className="flex flex-col overflow-auto w-full max-h-80  /md:max-h-[216px] /lg:max-h-[] /lg:max-h-[327px] ">
             {products.map((product, index) => {
               return (
                 <div key={index}>
@@ -57,7 +57,7 @@ export default function Bag({ bagOpen, setBagOpen,  }) {
             {products.length > 0 && (
               <div className="flex justify-center w-full min-h-max">
                 <SubPrice />
-              <div className="fixed  bottom-0 flex flex-col w-full px-8 /sm:px-0 sm:w-[400px] h-[100px] /bg-cinza-200 space-y-3 z-10 text-cinza-h2">
+              <div className="fixed  bottom-0 flex flex-col w-full px-8 sm:px-0 sm:w-[400px] h-[100px] /bg-cinza-200 space-y-3 z-10 text-cinza-h2">
                 <div className="flex justify-between font-semibold ">
                   <p className="text-lg ">Total</p>
                   <span className="">R$ {subPrice}</span>

@@ -12,7 +12,7 @@ import { useState } from "react";
 export const getServerSideProps = async () => {
   const pratos = [
     {
-      id: 1,
+      id: 41,
       title: "Big Tasty",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -20,7 +20,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/mac/BigTasty.png",
     },
     {
-      id: 2,
+      id: 42,
       title: "Big Mac",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -28,7 +28,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/mac/BigMac.png",
     },
     {
-      id: 3,
+      id: 43,
       title: "Quarteirão",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odiolabore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -36,7 +36,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/mac/Quarterao.png",
     },
     {
-      id: 4,
+      id: 44,
       title: "McChicken",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -44,7 +44,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/mac/McChicken.png",
     },
     {
-      id: 5,
+      id: 45,
       title: "Cheddar McMelt",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odiolabore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -52,7 +52,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/mac/McMelt.png",
     },
     {
-      id: 6,
+      id: 46,
       title: "McNífico",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -60,7 +60,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/mac/McNifico.png",
     },
     {
-      id: 7,
+      id: 47,
       title: "Crispy Chicken",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -68,7 +68,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/mac/CrispyChicken.png",
     },
     {
-      id: 8,
+      id: 48,
       title: "Chicken McNuggets",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -76,7 +76,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/mac/Nuggets.png",
     },
     {
-      id: 9,
+      id: 49,
       title: "Mc Lanche Feliz",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -84,7 +84,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/mac/LancheFelizW.png",
     },
     {
-      id: 10,
+      id: 50,
       title: "Mcflurry",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -94,9 +94,9 @@ export const getServerSideProps = async () => {
   ];
 
   const restaurante = {
-    title: "McDonalds - Paulista",
+    title: "McDonalds - Av. Paulista",
     time: "20-30 min",
-    delivery: "00.00",
+    delivery: "10.99",
   };
 
   return {

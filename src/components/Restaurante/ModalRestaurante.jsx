@@ -39,9 +39,9 @@ export default function ModalRestaurante({
 
   if (isOpen) {
     return (
-      <div className="fixed inset-0 flex justify-center items-center h-screen shadow z-50 bg-modal">
-        <div className=" fixed flex flex-col /justify-start /justify-between items-center m-10 w-full h-screen sm:w-auto sm:h-[600px] md:h-[500px]  lg:h-auto xl:m-0 xl:w-[1200px] xl:h-[580px] bg-branco  rounded">
-          <div className="flex flex-col h-screen justify-end items-stretch  /bg-cinza-400 ">
+      <div className="fixed inset-0 flex justify-center items-center h-full shadow z-50 bg-modal">
+        <div className=" fixed flex flex-col items-center m-10 w-full h-screen sm:w-auto sm:h-[600px] md:h-[500px]  lg:h-auto xl:m-0 xl:w-[1200px] xl:h-[580px] bg-branco  rounded">
+          <div className="flex flex-col h-full /h-screen justify-end items-stretch  /bg-cinza-400 ">
             <button
               onClick={() => setOpen(!isOpen)}
               className="absolute top-2 right-2 p-1 "
@@ -106,7 +106,7 @@ export default function ModalRestaurante({
             </div>
 
             <footer className="/bg-vermelho mt-3 flex items-center justify-center w-full h-20 p-10 sm:p-5 sm:absolute sm:bottom-0 sm:right-0 md:justify-end /sm:justify-around sm:pr-10 ">
-              <div className=" /bg-cinza flex items-center justify-center h-20 w-full gap-6 overflow-hidden border-solid border-t-2  border-gray sm:justify- sm:ml-5 sm:gap-6 sm:w-full md:max-w-[300px] md:gap-6 md:ml-0 lg:max-w-sm xl:max-w-lg  ">
+              <div className=" /bg-cinza flex items-center justify-center  h-20 w-full gap-6 overflow-hidden border-solid border-t-2  border-gray sm:justify-end sm:ml-5 sm:gap-6 sm:w-full md:max-w-[300px] md:gap-6 md:ml-0 lg:max-w-sm xl:max-w-lg  ">
                 <Contador
                   quantity={quantity}
                   increment={() => setQuantity(quantity + 1)}

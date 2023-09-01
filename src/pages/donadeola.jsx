@@ -11,7 +11,7 @@ import { useState } from "react";
 export const getServerSideProps = async () => {
   const pratos = [
     {
-      id: 1,
+      id: 21,
       title: "Pão Delícia",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -19,7 +19,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/donadeola/PaoDelicia.png",
     },
     {
-      id: 2,
+      id: 22,
       title: "Mini pão de queijo (10 unidades)",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -27,7 +27,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/donadeola/PaoDeQueijo.png",
     },
     {
-      id: 3,
+      id: 23,
       title: "Pão Francês na chapa",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -35,7 +35,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/donadeola/PaoFrances.png",
     },
     {
-      id: 4,
+      id: 24,
       title: "Empada de frango",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odiolabore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -43,7 +43,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/donadeola/EmpadaDeFrango.png",
     },
     {
-      id: 5,
+      id: 25,
       title: "Pão Francês (5 unidades)",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odiolabore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -51,7 +51,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/donadeola/PaoFrances5.png",
     },
     {
-      id: 6,
+      id: 26,
       title: "Mini Pão Delícia (5 unidades)",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -59,7 +59,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/donadeola/MiniPao.png",
     },
     {
-      id: 7,
+      id: 27,
       title: "Copan",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -67,7 +67,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/donadeola/Copan.png",
     },
     {
-      id: 8,
+      id: 28,
       title: "Pinacoteca",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -75,7 +75,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/donadeola/Pinacoteca.png",
     },
     {
-      id: 9,
+      id: 29,
       title: "Mini Pudim de Doce de Leite",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -83,7 +83,7 @@ export const getServerSideProps = async () => {
       imageURL: "/images-restaurant/donadeola/MiniPudim.png",
     },
     {
-      id: 10,
+      id: 30,
       title: "Café Expresso",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
@@ -93,7 +93,7 @@ export const getServerSideProps = async () => {
   ];
 
   const restaurante = {
-    title:"Dona Deôla - Higienopolis",
+    title:"Dona Deôla - Higienópolis",
     time:"15-20 min",
     delivery:"00.00",
   };

@@ -3,6 +3,7 @@ import Banner from "@/components/Restaurante/Banner";
 import SearchFood from "@/components/Restaurante/Busca";
 import Cardapio from "@/components/Restaurante/Cardapio";
 import InfoHeader from "@/components/Restaurante/InfoHeader";
+import Footer from "@/components/Footer/Footer";
 import ModalRestaurante from "@/components/Restaurante/ModalRestaurante";
 import Pratos, { IPratos } from "@/components/Restaurante/Pratos";
 import { useBagProvider } from "@/providers/BagContext/Provider";
@@ -84,7 +85,7 @@ export const getServerSideProps = async () => {
   ];
   
   const restaurante = {
-    title:"Bullguer - Santana",
+    title:"Bullguer - Barra Funda",
     time: "20 - 30 min" ,
     delivery: '00.00'
   }
@@ -149,6 +150,7 @@ export default function Bullguer(props) {
         currentDish={currentDish} 
         currentRestaurant={props.restaurante} 
       />
+      <Footer/>
     </div>
   );
 }
