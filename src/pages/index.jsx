@@ -10,12 +10,11 @@ import { useState } from "react";
 export default function Home() { 
 
   return (
-    <div className="h-full">
-      <header>
+    <div className="h-screen">
+      <header >
         <Header />
       </header>
       <main className="flex flex-col justify-center items-center">
-        
         <HomeImages />
         <ListaPratos />
         <ListaRestaurantes />

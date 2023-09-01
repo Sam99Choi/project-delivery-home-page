@@ -39,8 +39,8 @@ export default function ModalRestaurante({
 
   if (isOpen) {
     return (
-      <div className="fixed inset-0 flex justify-center items-center h-screen shadow z-50 bg-modal">
-        <div className=" fixed flex flex-col /justify-start /justify-between items-center m-10 w-full h-screen sm:w-auto sm:h-[600px] md:h-[500px]  lg:h-auto xl:m-0 xl:w-[1200px] xl:h-[580px] bg-branco  rounded">
+      <div className="fixed inset-0 flex justify-center items-center h-full shadow z-50 bg-modal">
+        <div className=" fixed flex flex-col items-center m-10 w-full h-screen sm:w-auto sm:h-[600px] md:h-[500px]  lg:h-auto xl:m-0 xl:w-[1200px] xl:h-[580px] bg-branco  rounded">
           <div className="flex flex-col h-full /h-screen justify-end items-stretch  /bg-cinza-400 ">
             <button
               onClick={() => setOpen(!isOpen)}

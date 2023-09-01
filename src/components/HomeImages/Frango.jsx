@@ -16,6 +16,7 @@ export default function Frango({id}) {
       </Link>
       <Link href={"/"}>
         <Image
+          id="2"
           className="rounded-2xl hover:-translate-y-0.5 transition shadow-cinza-200 shadow-md"
           src="/../public/images/hamburguer.avif"
           alt="sanduiche"
@@ -25,6 +26,7 @@ export default function Frango({id}) {
       </Link>
       <Link href={"/"}>
         <Image
+          id="3"
           className="rounded-2xl hover:-translate-y-0.5 transition shadow-cinza-200 shadow-md"
           src="/../public/images/macarrao.jpg"
           alt="macarrao"

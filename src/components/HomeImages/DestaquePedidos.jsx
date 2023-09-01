@@ -6,51 +6,61 @@ import Image from "next/image";
 import Link from "next/link";
 import Carousel from "./Carousel";
 import Frango from "./Frango";
+import { useRouter } from 'next/navigation';
 
 const slides = [
-  {
-    id: 1,
-    img: "./images/hamburguer.avif",
-    link: "/mac",
-  },
-  {
-    id: 2,
-    img: "./images/sanduiche.avif",
-    link: "/mac",
-  },
-  {
-    id: 3,
-    img: "./images/frango.avif",
-    link: "/mac",
-  },
-  {
-    id: 4,
-    img: "./images/hamburguer.avif",
-    link: "/mac",
-  },
-  {
-    id: 5,
-    img: "./images/sanduiche.avif",
-    link: "/mac",
-  },
-  {
-    id: 6,
-    img: "./images/frango.avif",
-    link: "/mac",
-  },
+  
   //"./images/hamburguer.avif",
   //"./images/frango.avif",
   //"./images/sanduiche.avif",
   //"./images/frango.avif",
   //"./images/hamburguer.avif",
+  {
+    id: 1,
+    img: "/./images/hamburguer.avif",
+    url: '/mac'
+  },
+  {
+    id: 2,
+    img: "/./images/sanduiche.avif",
+    url: '/mac'
+  },
+  {
+    id: 3,
+    img: "/./images/frango.avif",
+    url: '/mac'
+  },
+  {
+    id: 4,
+    img: "/./images/hamburguer.avif",
+    url: '/mac'
+  },
+  {
+    id: 5,
+    img: "/./images/sanduiche.avif",
+    url: '/mac'
+  },
+  {
+    id: 6,
+    img: "/./images/frango.avif",
+    url: "/mac"
+  },
+  {
+    id: 7,
+    img: "/./images/hamburguer.avif",
+    url: '/mac'
+  },
+
 ];
 
 export default function DestaquePedidos() {
+  const router = useRouter();
+  
   return (
-    <div className="flex justify-center  w-full h-auto max-w-7xl max-h-[350px] rounded">
+    <div  className="flex justify-center w-full h-auto md:rounded max-h-[350px] md:max-w-7xl ">
       <Carousel autoSlide={true}>
         {slides.map((slide) => (
-          <img key={slide.id} src={slide.img} />
+           <Image href={slide.url} key={slide.id} src={slide.img}  width={430} height={300} />  
         ))}
       </Carousel>
     </div>

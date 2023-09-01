@@ -8,6 +8,7 @@ export default function Logo() {
       alt="logo" 
       width="145"
       height="120"
+      className="max-w-[96px]"
       />
     </div>
   )

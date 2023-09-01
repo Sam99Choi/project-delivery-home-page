@@ -25,16 +25,24 @@ module.exports = {
       'verde': '#50a773',
       'modal': 'rgba(0, 0, 0, 0.5)'
     },
+    extend: { },
+  },
 
-    //#e2e8f0
+  variants: {
+    extended: {
+      display: ['group-focus'],
+      opacity: ['group-focus'],
+      inset: ['group-focus']
+    },
+  },
 
-    extend: {
-      backgroundImage: {
+  plugins: [],
+}
+
+/*
+ backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-    },
-  },
-  plugins: [],
-}
+*/
