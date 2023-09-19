@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function BullguerLanche() {
   return (
     <Link href={"/bullguer"}>
-      <div className="flex flex-col rounded-xl hover:-translate-y-0.5 transition">
+      <div className="flex flex-col justify-center items-center text-center /bg-vermelho rounded-xl hover:-translate-y-0.5 transition">
         <Image
           className="rounded-lg w-[220px] h-[147px] shadow-cinza-200 shadow-md"
           src="/../public/images-restaurant/bullguer/ChickenHotHoney.png"

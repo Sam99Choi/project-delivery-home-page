@@ -8,17 +8,18 @@ import Link from "next/link";
 
 export default function ListaPratos() {
   return (
-    <div className="flex flex-col mt-5 md:mx-[100px]  lg:mx-[180px]">
-      <div className="pl-5 md:mx-0">
+    <div className=" flex flex-col mt-5 w-full justify-center items-center /bg-vermelho md:mx-[100px] lg:mx-[180px]">
+      <div className="flex w-full px-5 md:px-[100px] lg:px-[180px] ">
         <FreteGratis />
       </div>      
-      <div className="flex py-5 w-ful gap-4">
+      <div className=" py-5 px-5 w-full gap-4 grid grid-cols-2  md:grid md:grid-cols-3 md:justify-between md:px-[100px] lg:flex lg:justify-between lg:px-[180px]">
         <Salada />
         <BullguerLanche />
         <Pudim />
         <Sanduiche />
-        <Esfiha />
+        <Esfiha/>
       </div>
     </div>
   );
 }
+//   

@@ -57,7 +57,7 @@ export default function DestaquePedidos() {
   const router = useRouter();
   
   return (
-    <div  className="flex justify-center w-full h-auto md:rounded max-h-[350px] md:max-w-7xl ">
+    <div  className="flex justify-center w-full h-auto px-5 md:px-0 md:rounded max-h-[300px] md:max-w-7xl ">
       <Carousel autoSlide={true}>
         {slides.map((slide) => (
            <Image href={slide.url} key={slide.id} src={slide.img}  width={430} height={300} />  

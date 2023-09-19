@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
-/* eslint-disable @next/next/link-passhref */
+//* eslint-disable @next/next/link-passhref */
 import Link from "next/link";
 import Avatar from "./Header-icons/Avatar";
 import Search from "./Header-icons/Search";
@@ -31,19 +31,19 @@ export default function HeaderItems() {
           </Link>
 
           <nav className="flex justify-around items-center p-1 ">
-            <ul className="hidden gap-8 md:flex">
+            <ul className="hidden gap-8 lg:flex">
               <li className="text-cinza-200 hover:text-vermelho">
                 <Link href={"/"}>Início</Link>
               </li>
               <li>
-                <Link href="" className="text-cinza-200 hover:text-vermelho">
+                <Link href={ '/#restaurante'} className="text-cinza-200 hover:text-vermelho">
                   Restaurantes
                 </Link>
               </li>
             </ul>
           </nav>
 
-          <div className="hidden md:flex items-center w-full h-[48px] shadow rounded-lg bg-gray-100 p-4">
+          <div className="hidden lg:flex items-center w-full h-[48px] shadow rounded-lg bg-gray-100 p-4">
             <Search />
             <input
               className=" flex w-full pl-2 items-center bg-gray-100 focus:outline-none text-preto"
@@ -52,7 +52,7 @@ export default function HeaderItems() {
             ></input>
           </div>
 
-          <div className="hidden md:flex items-center justify-center m-8 gap-8 w-[100px] h-[44px]">
+          <div className="hidden lg:flex items-center justify-center m-8 gap-8 w-[100px] h-[44px]">
             <button className="flex justify-center items-center">
               <Avatar />
             </button>
@@ -67,14 +67,14 @@ export default function HeaderItems() {
           {
             isMounted 
             ? (
-              <button className="block md:hidden py-3 px-4 rounded focus:outline-none  hover:bg-cinza group">
+              <button  className="block lg:hidden py-3 px-4 rounded focus:outline-none  hover:bg-cinza group">
                 <div className="w-5 h-1 bg-cinza-400 mb-1"></div>
                 <div className="w-5 h-1 bg-cinza-400 mb-1"></div>
                 <div className="w-5 h-1 bg-cinza-400 mb-1"></div>
                 
             
                 <div
-                  className={`absolute top-0 -right-full w-full h-screen sm:w-[475px] 8/12 bg-branco border-solid border-t-2 shadow-lg border-l border-borda opacity-0 
+                  className={`absolute top-0 -right-full w-full h-screen sm:w-[475px] bg-branco border-solid border-t-2 shadow-lg border-l border-borda opacity-0 
                   group-focus:right-0 group-focus:opacity-100 transition-all duration-300 `}
                 >
                   <div className="absolute top-2 right-2 p-1 "><X/></div>
@@ -83,8 +83,9 @@ export default function HeaderItems() {
                     <li onClick={() => router.push('/')} className="hover:bg-cinza py-4 px-6 w-full">
                       Início
                     </li>
-                    <li  className="hover:bg-cinza py-4 px-6 w-full">
-                      Restaurantes
+                    <li onClick={() => router.push('/#restaurante')} className="hover:bg-cinza py-4 px-6 w-full">              
+                        Restaurantes                     
+                      
                     </li>
                     <li onClick={() => setOpen(!open)} className="flex gap-2 justify-center hover:bg-cinza py-4 px-6 w-full">
                       

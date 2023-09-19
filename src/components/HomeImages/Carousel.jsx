@@ -25,9 +25,9 @@ export default function Carousel({
     }, [])
 
   return (
-    <div className="overflow-hidden relative h-auto w-full rounded-md cursor-pointer">
+    <div className="overflow-hidden relative h-auto w-full rounded-md cursor-pointer ">
         <div
-            className="flex gap-4 /w-1/2 rounded w-5/12 h-auto transition-transform ease-out duration-500"
+            className="flex gap-4 /w-1/2 rounded w-8/12 md:w-5/12 h-auto transition-transform ease-out duration-500"
             style={{ transform: `translateX(-${curr * 100}%)` }}
         >
             {slides}
@@ -39,13 +39,13 @@ export default function Carousel({
           onClick={prev}
           className="p-1 rounded-full shadow bg-branco text-cinza-h2 hover:bg-cinza hover:text-preto"
         >
-          <BsChevronLeft size={40}/>
+          <BsChevronLeft size={30 }/>
         </button>
         <button
           onClick={next}
           className="p-1 rounded-full shadow bg-branco text-cinza-h2 hover:bg-cinza hover:text-preto"
         >
-        <BsChevronRight size={40}/>
+        <BsChevronRight size={30}/>
         </button>
       </div>
 

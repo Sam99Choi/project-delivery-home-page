@@ -69,7 +69,7 @@ export const getServerSideProps = async () => {
     },
     {
       id: 18,
-      title: "Pinacoteca",
+      title: "Poke de Camarão",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",
@@ -77,7 +77,7 @@ export const getServerSideProps = async () => {
     },
     {
       id: 19,
-      title: "Mini Pudim de Doce de Leite",
+      title: "Poke de Salmão",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio labore laudantium obcaecati tempore asdasdçalskdaçslk açsldk...",
       price: "49.99",

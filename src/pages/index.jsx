@@ -14,12 +14,12 @@ export default function Home() {
       <header >
         <Header />
       </header>
-      <main className="flex flex-col justify-center items-center">
+      <main className="flex flex-col justify-center items-center mb-7 lg:mb-0">
         <HomeImages />
         <ListaPratos />
         <ListaRestaurantes />
       </main>
-      <footer>
+      <footer className="">
         <Footer />
       </footer>
     </div>

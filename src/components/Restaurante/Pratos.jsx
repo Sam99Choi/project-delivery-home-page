@@ -18,7 +18,7 @@ export default function Pratos(props) {
             <h3 className="flex flex-grow /h-auto h-10 w-44 lg:w-72 xl:w-full overflow-hidden truncate md:text-clip justify-start items-center mb-4 text-left text-lg text-cinza-400 font-medium bg-branco">
                 {title}
             </h3>
-            <p className="flex h-10 w-40 lg:w-full overflow-hidden mb-3 text-left text-sm text-cinza-200 font-light">
+            <p className="flex h-10 w-40 lg:w-full overflow-hidden  mb-3 text-left text-sm text-cinza-200 font-light">
                 {content} 
             </p>
           </div>

@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer/Footer";
 import Header from "@/components/header/Header";
 import Banner from "@/components/Restaurante/Banner";
 import SearchFood from "@/components/Restaurante/Busca";
@@ -158,6 +159,8 @@ export default function Deola(props) {
         currentDish={currentDish} 
         currentRestaurant={props.restaurante} 
       />
+
+      <Footer/>
     </div>
   );
 
