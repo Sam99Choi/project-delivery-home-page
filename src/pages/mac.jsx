@@ -8,8 +8,10 @@ import ModalRestaurante from "@/components/Restaurante/ModalRestaurante";
 import Pratos, { IPratos } from "@/components/Restaurante/Pratos";
 import { useBagProvider } from "@/providers/BagContext/Provider";
 import { useState } from "react";
+import fetch from "node-fetch";
 
-export const getServerSideProps = async () => {
+// export const getServerSideProps = async () => {
+export async function getServerSideProps(context) {
   const pratos = [
     {
       id: 41,
@@ -93,8 +95,11 @@ export const getServerSideProps = async () => {
     },
   ];
 
+  const response = await fetch('http://localhost:1337/api/restaurants/1')
+  console.log(response);
+  const restaurant = await response.json()
   const restaurante = {
-    title: "McDonalds - Av. Paulista",
+    ...restaurant,
     time: "20-30 min",
     delivery: "10.99",
   };
@@ -111,6 +116,8 @@ export default function Mac(props) {
 
   const [open, setOpen] = useState(false);
   const {currentDish, setCurrentDish} = useBagProvider()
+
+  console.log("===> restaurante: ", props.restaurante)
 
   return (
     <div className=" w-full">
