@@ -8,9 +8,7 @@ import ModalRestaurante from "@/components/Restaurante/ModalRestaurante";
 import Pratos, { IPratos } from "@/components/Restaurante/Pratos";
 import { useBagProvider } from "@/providers/BagContext/Provider";
 import { useState } from "react";
-import fetch from "node-fetch";
 
-// export const getServerSideProps = async () => {
 export async function getServerSideProps(context) {
   const pratos = [
     {
@@ -96,28 +94,21 @@ export async function getServerSideProps(context) {
   ];
 
   const response = await fetch('http://127.0.0.1:1337/api/restaurants/1')
-  console.log(response);
   const restaurant = await response.json()
-  const restaurante = {
-    ...restaurant,
-    time: "20-30 min",
-    delivery: "10.99",
-  };
-
+  restaurant.data.attributes.time = "20-30 min";
+  restaurant.data.attributes.delivery = "10.99";
+  
   return {
     props: {
       pratos,
-      restaurante,
+      restaurante: restaurant,
     },
   };
 };
 
 export default function Mac(props) {
-
   const [open, setOpen] = useState(false);
   const {currentDish, setCurrentDish} = useBagProvider()
-
-  console.log("===> restaurante: ", props.restaurante)
 
   return (
     <div className=" w-full">
@@ -131,9 +122,9 @@ export default function Mac(props) {
         />
         <InfoHeader 
          imageURL="images/mc.png"
-         title={props.restaurante.title} 
-         time={props.restaurante.time} 
-         delivery={props.restaurante.delivery} 
+         title={props.restaurante.data.attributes.title} 
+         time={props.restaurante.data.attributes.time} 
+         delivery={props.restaurante.data.attributes.delivery} 
         />
         <SearchFood />
       </div>
@@ -187,9 +178,9 @@ export default function Mac(props) {
         <Banner imageURL="images-restaurant/mac/bannerMc.png" />
         <InfoHeader
           imageURL="images/mc.png"
-          title={props.restaurante.title}
-          time={props.restaurante.time}
-          delivery={props.restaurante.delivery}
+          title={props.restaurante.data.attributes.title}
+          time={props.restaurante.data.attributes.time}
+          delivery={props.restaurante.data.attributes.delivery}
         />
         <SearchFood />
       </div>
