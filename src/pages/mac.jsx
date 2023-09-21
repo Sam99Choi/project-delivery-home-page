@@ -93,8 +93,12 @@ export async function getServerSideProps(context) {
     },
   ];
 
+  // Samu, como proximo passo, cria um arquivo chamado ".env.local" na raiz do seu projeto, declare o dominio usando uma variavel como por exemplo:
+  // API_URL=http://127.0.0.1:1337/api e depois disso usa essa variavel assim:
+  // const response = await fetch(`${process.env.API_URL}/restaurants/1`)
+  // Desse jeito trará mais flexibilidade e melhor gerenciamento do dominio na aplicacao
   const response = await fetch('http://127.0.0.1:1337/api/restaurants/1')
-  const restaurant = await response.json()
+  const restaurant = await response.json() 
   restaurant.data.attributes.time = "20-30 min";
   restaurant.data.attributes.delivery = "10.99";
   
