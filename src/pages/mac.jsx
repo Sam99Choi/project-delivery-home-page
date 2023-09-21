@@ -95,7 +95,7 @@ export async function getServerSideProps(context) {
     },
   ];
 
-  const response = await fetch('http://localhost:1337/api/restaurants/1')
+  const response = await fetch('http://127.0.0.1:1337/api/restaurants/1')
   console.log(response);
   const restaurant = await response.json()
   const restaurante = {
