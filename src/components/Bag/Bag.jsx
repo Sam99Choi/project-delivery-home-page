@@ -24,7 +24,7 @@ export default function Bag({ bagOpen, setBagOpen,  }) {
 
   if (bagOpen) {
     return (
-      <div className="fixed right-0 flex w-full h-full px-10 sm:w-[475px] /sm:h-full z-50 mt-20 shadow-lg overflow-auto /bg-vermelho bg-branco border-solid border-t-2 border-l border-borda ">
+      <div className="fixed right-0 /bottom-1 md:top-0 flex w-full h-screen full px-10 sm:w-[475px] /sm:h-screen full z-50 mt-20 shadow-lg overflow-auto /bg-vermelho bg-branco border-solid border-t-2 border-l border-borda ">
         
         <div className="flex flex-col justify-center items-center w-screen h-full /bg-branco z-50  ">
         <button

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Habibs() {
   return (
-    <Link href={"/habibs"}>
+    <Link href={"/restaurants/habibs-ipiranga"}>
       <div className="hover:-translate-y-0.5 transition flex items-center">
         <div>
         <Card 

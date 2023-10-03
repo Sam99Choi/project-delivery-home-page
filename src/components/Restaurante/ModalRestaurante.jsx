@@ -27,8 +27,8 @@ export default function ModalRestaurante({
   };
 
   useEffect(() => {
-    setModalPrice((currentDish.price * quantity).toFixed(2));
-  }, [currentDish.price, quantity, setModalPrice]);
+    setModalPrice((currentDish.attributes.price * quantity).toFixed(2));
+  }, [currentDish.attributes.price, quantity, setModalPrice]);
 
   useEffect(() => setQuantity(1), [isOpen]);
 
@@ -49,9 +49,9 @@ export default function ModalRestaurante({
               <X />
             </button>
             <div className="flex flex-col  justify-center  items-center md:flex-row sm:h-full sm:items-center sm:justify-center md:items-center lg:items-center xl:items-start /bg-vermelho  ">
-              <div className="flex justify-top m-4 sm:items-center h-3/4 w-4/5 sm:h-1/4 sm:w-1/2 md:w-1/2 /md:h-full [300px] md:items-center md:h-auto lg:h-auto  /bg-preto">
+              <div className="flex justify-top m-4 sm:items-center h-3/4 w-4/5 sm:h-1/4 sm:w-1/2 md:w-1/2  md:items-center md:object-cover /md:h-3/4 /md:h-auto lg:h-auto  /bg-preto">
                 <img
-                  src={currentDish.imageURL}
+                  src={currentDish.attributes.imageURL}
                   className=" flex flex-1 justify-center items-center p-2 /bg-gray /sm:h-auto md:h-[400px] md:w-[400px] lg:w-[516px] lg:h-[516px]"
                 />
               </div>
@@ -59,19 +59,19 @@ export default function ModalRestaurante({
               <div className="/bg-vermelho flex flex-col items-center sm:justify-center md:w-1/2  md:justify-start lg:justify-center xl:justify-start /bg-cinza  space-y-4 /md:space-y-1  ">
                 <div className="flex justify-center items-end w-full sm:h-24 md:h-auto xl:h-48">
                   <h2 className="flex justify-center items-center w-full h-4 px-10 md:mb-2 text-justify font-medium text-xl text-cinza-h2">
-                    {currentDish.title}
+                    {currentDish.attributes.title}
                   </h2>
                 </div>
 
                 <div className="flex flex-col justify-center items-center ">
                   <div className="flex justify-center items-center w-full pt-2.5 px-10  ">
                     <p className="flex justify-center items-center w-full /text-ellipsis overflow-hidden sm:h-auto sm:text-sm  sm:max-h-20 /md:max-h-20 lg:text-base font-light text-cinza-200 text-justify">
-                      {currentDish.content}
+                      {currentDish.attributes.content}
                     </p>
                   </div>
                   <div className="flex justify-center items-center w-full px-10 mt-4 sm:mt-1 md:my-3 ">
                     <p className="flex justify-start items-center w-full h-auto text-cinza-h2 text-xs font-medium">
-                      <span>R$ {currentDish.price} </span>
+                      <span>R$ {currentDish.attributes.price} </span>
                     </p>
                   </div>
                 </div>

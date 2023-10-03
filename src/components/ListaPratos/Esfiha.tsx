@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Esfiha() {
   return (
-    <Link href={"/habibs"}>
+    <Link href={"/restaurants/3"}>
       <div className="flex flex-col text-center justifyy-center items-center rounded-xl hover:-translate-y-0.5 transition">
         <Image
           className="rounded-lg w-[220px] h-[147px] shadow-cinza-200 shadow-md"

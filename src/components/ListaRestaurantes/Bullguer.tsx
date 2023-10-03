@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Bullguer() {
   return (
-    <Link href={"/bullguer"}>
+    <Link href={"/restaurants/bullguer-barra-funda"}>
       <div className="hover:-translate-y-0.5 transition flex items-center">
         <div>
           <Card

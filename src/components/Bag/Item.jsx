@@ -14,7 +14,7 @@ export default function Item({title, price, product,}) {
     <div>
       <div className=" w-full  py-4 space-y-3 bg-branco border-t border-cinza z-50  " >
         <div className="flex flex-1 justify-between items-center text-base font-semibold text-cinza-h2 mb-3">
-          <h2 className="max-w-[300px]">{product.title}</h2>
+          <h2 className="max-w-[300px]">{product.attributes.title}</h2>
           <span className="">R$ {product.totalPrice}</span>
         </div>
         <div className="flex gap-3">

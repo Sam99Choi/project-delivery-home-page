@@ -4,7 +4,7 @@ export const BagContext = createContext({});
 
 export const BagProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
-  const [currentDish, setCurrentDish] = useState({});
+  const [currentDish, setCurrentDish] = useState({attributes:{}});
   const [modalPrice, setModalPrice] = useState(currentDish.price);
   const [open, setOpen] = useState(false);
   
@@ -16,7 +16,7 @@ export const BagProvider = ({ children }) => {
         return {
           ...product,
           quantity: (product.quantity += quantity),
-          totalPrice: (product.price * product.quantity).toFixed(2),
+          totalPrice: (product.attributes.price * product.quantity).toFixed(2),
         };
       } else {
         return product;
@@ -31,7 +31,7 @@ export const BagProvider = ({ children }) => {
         return {
           ...product,
           quantity: (product.quantity -= quantity),
-          totalPrice: (product.price * product.quantity).toFixed(2),
+          totalPrice: (product.attributes.price * product.quantity).toFixed(2),
         };
       } else {
         return product;
@@ -49,7 +49,7 @@ export const BagProvider = ({ children }) => {
           return {
             ...product,
             quantity: (product.quantity += quantity),
-            totalPrice: (product.price * product.quantity).toFixed(2),
+            totalPrice: (product.attributes.price * product.quantity).toFixed(2),
           };
         } else {
           return product;
@@ -61,7 +61,7 @@ export const BagProvider = ({ children }) => {
         ...currentDish,
       };
       newDish.quantity = quantity;
-      newDish.totalPrice = (newDish.price * newDish.quantity).toFixed(2);
+      newDish.totalPrice = (newDish.attributes.price * newDish.quantity).toFixed(2);
       setProducts([...products, newDish]);
     }
   };

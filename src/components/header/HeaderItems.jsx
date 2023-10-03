@@ -36,7 +36,7 @@ export default function HeaderItems() {
                 <Link href={"/"}>Início</Link>
               </li>
               <li>
-                <Link href={ '/#restaurante'} className="text-cinza-200 hover:text-vermelho">
+                <Link href={ '/restaurants'} className="text-cinza-200 hover:text-vermelho">
                   Restaurantes
                 </Link>
               </li>
@@ -83,7 +83,7 @@ export default function HeaderItems() {
                     <li onClick={() => router.push('/')} className="hover:bg-cinza py-4 px-6 w-full">
                       Início
                     </li>
-                    <li onClick={() => router.push('/#restaurante')} className="hover:bg-cinza py-4 px-6 w-full">              
+                    <li onClick={() => router.push('/restaurants')} className="hover:bg-cinza py-4 px-6 w-full">              
                         Restaurantes                     
                       
                     </li>

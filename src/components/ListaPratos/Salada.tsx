@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Salada() {
   return (
-    <Link href={"/montana"}>
+    <Link href={"/restaurants/6"}>
       <div className="flex flex-col items-center justify-center text-center hover:-translate-y-0.5 transition">
         <Image
           className="rounded-xl w-[220px] h-[147px] shadow-cinza-200 shadow-md"

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function McDonalds() {
   return (
-    <Link href={"/mac"}>
+    <Link href={"/restaurants/mc-donalds-av-paulista"}>
       <div className="hover:-translate-y-0.5 transition flex items-center">
         <div>
         <Card 

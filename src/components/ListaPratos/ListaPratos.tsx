@@ -12,7 +12,7 @@ export default function ListaPratos() {
       <div className="flex w-full px-5 md:px-[100px] lg:px-[180px] ">
         <FreteGratis />
       </div>      
-      <div className=" py-5 px-5 w-full gap-4 grid grid-cols-2  md:grid md:grid-cols-3 md:justify-between md:px-[100px] lg:flex lg:justify-between lg:px-[180px]">
+      <div className=" py-5 px-5 w-full gap-4 grid grid-cols-2  md sm:grid md sm:grid-cols-3 md:justify-between md:px-[100px] lg:flex lg:justify-between lg:px-[180px]">
         <Salada />
         <BullguerLanche />
         <Pudim />
