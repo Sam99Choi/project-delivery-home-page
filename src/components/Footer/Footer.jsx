@@ -2,7 +2,7 @@ import Logo from "../header/Logo";
 
 export default function Footer() {
   return(
-    <div className=" flex items-center  h-28 sm:h-20 lg:h-20 gap-3 lg:mt-12 mt-10 pb-4 px-4 ">
+    <div className=" flex items-center /bg-vermelho h- 20 8 sm:h-20 lg:h-20 gap-3 lg:mt-12 mt-5 8 10 pb-4 px-4 ">
       <div>
         <Logo />
       </div>

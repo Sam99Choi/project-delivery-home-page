@@ -11,7 +11,7 @@ export default function Restaurants(props) {
       <main className="flex sm:items-start lg:items-center items-center justify-center w-full h-full mt-48 sm:mt-24 /bg-vermelho ">
         <ListaRestaurantes />
       </main>
-      <footer className=" mt-14 sm:mt-0 /bg-preto">
+      <footer className=" mt-16 20 18 4 sm:mt-0 /bg-preto">
         <Footer/>
       </footer>
     </div>
