@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Header from "@/components/header/Header";
 import Footer from "@/components/Footer/Footer";
 import Image from "next/image";
@@ -12,21 +13,22 @@ export default function New(props) {
   // const [image, setImage] = useState();
 
   const fileInput = useRef(null);
+  const [img, setImg] = useState();
 
   const submit = async (e) => {
     e.preventDefault();
-    
+
     const body = {
-      data: { 
-        title, 
-        address, 
-        addressNumber, 
-        zipCode, 
+      data: {
+        title,
+        address,
+        addressNumber,
+        zipCode,
         complement,
         slug: title.toLowerCase().replace(/ /g, "-"),
       },
-    }
-    
+    };
+
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_STRAPI_URL}/restaurants`,
       {
@@ -38,22 +40,24 @@ export default function New(props) {
       }
     );
     const restaurants = await response.json();
-    
-    console.log("fileInput.current.files", fileInput.current.files)
-    console.log("fileInput.current.files[0]", fileInput.current.files[0])
-    
+
+    //console.log("fileInput.current.files", fileInput.current.files);
+    //console.log("fileInput.current.files[0]", fileInput.current.files[0]);
+
     const formData = new FormData();
-    formData.append('files', fileInput.current.files[0]);
-    formData.append('refId', restaurants.data.id);
-    formData.append('ref', 'api::restaurant.restaurant');
-    formData.append('field', 'logo');
-    
+    formData.append("files", fileInput.current.files[0]);
+    formData.append("refId", restaurants.data.id);
+    formData.append("ref", "api::restaurant.restaurant");
+    formData.append("field", "logo");
+
+
     const responseUpload = await fetch(
-      `${process.env.NEXT_PUBLIC_STRAPI_URL}/upload`, 
+      `${process.env.NEXT_PUBLIC_STRAPI_URL}/upload`,
       {
-      method: "post",
-      body: formData,
-    });    
+        method: "post",
+        body: formData,
+      }
+    );
   };
 
   return (
@@ -62,7 +66,7 @@ export default function New(props) {
         <Header />
       </header>
       <main className="flex items-center sm:justify-center h-full w-full /bg-vermelho pt-20 sm:pt-0  sm:mt-20 md:mt-[100px] 2xl:mt-[110px] ">
-        <div className="flex w-full h-full 5/6 md:w-3/4 md:h-[500px] sm:shadow-md bg-gray borda vermelho">
+        <div className="flex w-full h-full 5/6 md:w-3/4 md:h-[500px] sm:shadow-md bg-gray borda vermelho scroll-auto">
           <div className="hidden md:flex md:w-1/2  ">
             <Image
               src="/../public/images/signup.png"
@@ -71,9 +75,12 @@ export default function New(props) {
               alt="image sign up"
             />
           </div>
-          <div className="flex flex-col justify-around sm:justify-normal  p-6 w-full /h-5/6 auto full screen sm:h-auto full md:w-1/2 space-y-7  bg-gray vermelho/5">
+          <div className="relative flex flex-col justify-around sm:justify-normal  p-6 w-full /h-5/6 auto full screen sm:h-auto full md:w-1/2 space-y-7  bg-gray vermelho/5">
             <h1 className="text-2xl font-bold">Cadastro</h1>
-            <form onSubmit={submit} className="mb-2 w-full grid sm:grid-cols-2 gap-6">
+            <form
+              onSubmit={submit}
+              className="mb-2 w-full grid sm:grid-cols-2 gap-6"
+            >
               <p className="flex flex-col">
                 <label htmlFor="title">Restaurante: </label>
                 <input
@@ -128,20 +135,42 @@ export default function New(props) {
                   onChange={(e) => setComplement(e.target.value)}
                 />
               </p>
-              <div className="flex flex-col ">
+              <div className=" flex flex-col ">
                 <label htmlFor="image">Logo </label>
-                <input
-                  className=" bg-branco"
+              
+                {img ? (
+                  <img
+                    src={URL.createObjectURL(img)}
+                    alt="imagem"
+                    width={150}
+                    height={150}
+                    className="w-full max-w-[300px] max-h-[150px] rounded-md mt-2"
+                  />
+                ) : (
+                  <div class="relative">
+                  <input 
                   type="file"
                   ref={fileInput}
+                  onChange={(e) => setImg(e.target.files[0])}
                   accept="image/*"
-                  id="image"
-                />
+                  id="image" 
+                  name="image"
+                  className="/hidden w-full"/>
+
+                  <label for="image" className=" flex justify-center items-center text-center text-preto w-full h-[150px] max-h-[150px] rounded-md mt-1 shadow-sm bg-gray-100 hover:bg-cinza-100 file:rounded-sm file:border-0 file:p-1 file:bg-cinza-100 branco placeholder:italic cursor-pointer ">
+                    Selecione uma imagem
+                  </label>
+                </div>
+                
+                )}
               </div>
-              <div className="flex items-center justify- end mt-10 w-full /bg-vermelho h-auto  ">
-                <button  type="submit" className="flex justify-center items-center  w-full h-10 sm:w-auto sm:h-auto sm:px-4 3 sm:py-2 rounded-md text-branco font-medium bg-vermelho hover:bg-vermelho/75 ">
-                  Enviar  
-                </button>            
+              <div className="md::absolute bottom-0 right-6 /relative flex items-center mb-2 mt-5 10 /w-full /bg-vermelho h-auto  ">
+                <button
+                  type="submit"
+                  className="/absolute /top-7 flex justify-center items-center  w-full h-10 sm:w-auto sm:h-auto sm:px-4 3 sm:py-2 rounded-md text-branco font-medium bg-vermelho hover:bg-vermelho/75 "
+                >
+                  Enviar
+                </button>
               </div>
             </form>
           </div>
@@ -165,4 +194,15 @@ zipCode
 
 */
 
-//
+/*
+ <input
+                  placeholder="Selecione uma imagem"
+                  className=" flex justify-center items-center display-none text-preto w-full h-[150px] rounded-md mt-1 bg-gray-100 hover:bg-cinza-100 file:rounded-sm file:border-0 file:p-1 file:bg-cinza-100 branco placeholder:italic "
+                  type="file"
+                  ref={fileInput}
+                  onChange={(e) => setImage(e.target.files[0])}
+                  accept="image/*"
+                  id="image"
+                  />
+*/
+
